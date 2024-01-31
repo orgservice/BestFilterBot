@@ -1,8 +1,3 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
-
 from pyrogram import Client, filters
 import datetime
 import time
@@ -12,12 +7,12 @@ from utils import broadcast_messages, broadcast_messages_group
 import asyncio
         
 @Client.on_message(filters.command("broadcast") & filters.user(ADMINS) & filters.reply)
-# https://t.me/GetTGLink/4178
+
 async def verupikkals(bot, message):
     users = await db.get_all_users()
     b_msg = message.reply_to_message
     sts = await message.reply_text(
-        text='Broadcasting your messages...'
+        text='Broadcasting Your messages...'
     )
     start_time = time.time()
     total_users = await db.total_users_count()
