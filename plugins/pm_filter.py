@@ -77,7 +77,7 @@ async def pm_text(bot, message):
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
          text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ᴀᴅᴅ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ᴏᴡɴ ɢʀᴏᴜᴘ ᴏʀ ᴄʟɪᴄᴋ ɢɪᴠᴇɴ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")]])
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')]])
     )
     await bot.send_message(
         chat_id=LOG_CHANNEL,
@@ -131,8 +131,7 @@ async def next_page(bot, query):
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
+        btn.insert(12, [
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
         ])
     else:
@@ -144,8 +143,7 @@ async def next_page(bot, query):
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
+        btn.insert(12, [
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
         ])
     try:
@@ -270,7 +268,7 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
     try:
         if int(query.from_user.id) not in [query.message.reply_to_message.from_user.id, 0]:
             return await query.answer(
-                f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nʀᴇQᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ...",
+                f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nTʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nRᴇQᴜᴇꜱᴛ Yᴏᴜʀsᴇʟғ...",
                 show_alert=True,
             )
     except:
@@ -328,7 +326,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     try:
         if int(req) not in [query.message.reply_to_message.from_user.id, 0]:
             return await query.answer(
-                f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nʀᴇQᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ...",
+                f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nTʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nRᴇQᴜᴇꜱᴛ Yᴏᴜʀsᴇʟғ...",
                 show_alert=True,
             )
     except:
@@ -360,8 +358,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
+        btn.insert(12, [
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
         ])
     else:
@@ -373,8 +370,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
+        btn.insert(12, [
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
         ])
 
@@ -425,7 +421,7 @@ async def seasons_cb_handler(client: Client, query: CallbackQuery):
     try:
         if int(query.from_user.id) not in [query.message.reply_to_message.from_user.id, 0]:
             return await query.answer(
-                f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nʀᴇQᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ...",
+                f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nTʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nRᴇQᴜᴇꜱᴛ Yᴏᴜʀsᴇʟғ...",
                 show_alert=True,
             )
     except:
@@ -491,7 +487,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
     try:
         if int(req) not in [query.message.reply_to_message.from_user.id, 0]:
             return await query.answer(
-                f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nʀᴇQᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ...",
+                f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nTʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nRᴇQᴜᴇꜱᴛ Yᴏᴜʀsᴇʟғ...",
                 show_alert=True,
             )
     except:
@@ -539,7 +535,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
             ]
             for file in files
         ]
-        btn.insert(0, [
+        btn.insert(12, [
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton("Sᴇʟᴇᴄᴛ ᴀɢᴀɪɴ", callback_data=f"seasons#{key}")
         ])
@@ -552,8 +548,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
+        btn.insert(12, [
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
         ])
         
@@ -839,7 +834,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 else:
                     await query.answer(f"Hᴇʏ {query.from_user.first_name}, Tʜɪs Is Nᴏᴛ Yᴏᴜʀ Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ. Rᴇǫᴜᴇsᴛ Yᴏᴜʀ's !", show_alert=True)
         except UserIsBlocked:
-            await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀʜɴ !', show_alert=True)
+            await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀɴ !', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
@@ -857,7 +852,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=allfiles_{key}")
                 return
         except UserIsBlocked:
-            await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀʜɴ !', show_alert=True)
+            await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀɴ !', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=sendfiles3_{key}")
         except Exception as e:
@@ -888,7 +883,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("Jᴏɪɴ ᴏᴜʀ Bᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ ᴍᴀʜɴ! 😒", show_alert=True)
+            await query.answer("Jᴏɪɴ ᴏᴜʀ Bᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ ᴍᴀɴ! 😒", show_alert=True)
             return
         ident, kk, file_id = query.data.split("#")
         await query.answer(url=f"https://t.me/{temp.U_NAME}?start={kk}_{file_id}")
@@ -1171,8 +1166,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         btn2 = [[
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
-               ],[
-                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/+KzbVzahVdqQ3MmM1")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1196,8 +1189,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         btn2 = [[
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
-               ],[
-                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/vj_bots")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1271,7 +1262,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         except Exception as e:
             print(e)  # print the error message
-            await query.answer(f"☣something went wrong sweetheart\n\n{e}", show_alert=True)
+            await query.answer(f"☣Something Went Wrong \n\n{e}", show_alert=True)
             return
     # don't change anything without contacting me @creatorrio
 
@@ -1286,17 +1277,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=GRP_LNK)
+                    InlineKeyboardButton('✪ 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ✪', url='https://t.me/orgprime')
                 ],[
                     InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
                 ],[
-                  InlineKeyboardButton('💌 SOURCE CODE 💌', callback_data='source')
-                ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
+                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url='https://t.me/orgprime')
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1354,18 +1343,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
              InlineKeyboardButton('⚙️ ᴀᴅᴍɪɴ ᴏɴʟʏ 🔧', callback_data='admin'),
          ], [ 
              InlineKeyboardButton('ꜰɪʟᴇ ꜱᴛᴏʀᴇ', callback_data='store_file'),   
-             InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ', callback_data='tele') 
+             InlineKeyboardButton('ꜰɪʟᴛᴇʀꜱ', callback_data='filters') 
          ], [ 
              InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴꜱ', callback_data='coct'), 
-             InlineKeyboardButton('ꜰɪʟᴛᴇʀꜱ', callback_data='filters'),  
-             InlineKeyboardButton('ʏᴛ-ᴅʟ', callback_data='ytdl') 
-         ], [ 
-             InlineKeyboardButton('ꜱʜᴀʀᴇ ᴛᴇxᴛ', callback_data='share'), 
-             InlineKeyboardButton('ꜱᴏɴɢ', callback_data='song') 
-         ], [
-             InlineKeyboardButton('ᴇᴀʀɴ ᴍᴏɴᴇʏ', callback_data='shortlink_info'),
-             InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ-ɪᴅ', callback_data='sticker'),
-             InlineKeyboardButton('ᴊ-ꜱᴏɴ', callback_data='json'),  
+             InlineKeyboardButton('ᴇᴀʀɴ ᴍᴏɴᴇʏ', callback_data='shortlink_info')  
          ], [             
              InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start')
         ]]
@@ -1382,9 +1363,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-            InlineKeyboardButton('Sᴏᴜʀᴄᴇ Cᴏᴅᴇ', callback_data='source')
-        ],[
             InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close_data')
         ]]
@@ -1602,7 +1580,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "tele":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="help"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVJ01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1643,7 +1621,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "share":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="help"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1659,7 +1637,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "song":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="help"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1700,7 +1678,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "sticker":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="help"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1716,7 +1694,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "tamil_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1732,7 +1710,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "english_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1748,7 +1726,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "hindi_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1764,7 +1742,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "telugu_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1780,7 +1758,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "malayalam_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1796,7 +1774,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "urdu_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1812,7 +1790,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "bangladesh_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
 
             await client.edit_message_media(
@@ -1829,7 +1807,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "kannada_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1845,7 +1823,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "gujarati_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/UHDSupport")
                   ]]
         
             await client.edit_message_media(
@@ -2008,8 +1986,7 @@ async def auto_filter(client, msg, spoll=False):
                 InlineKeyboardButton("Sᴇᴀsᴏɴs", callback_data=f"seasons#{key}")
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
+        btn.insert(12, [
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
         ])
     else:
@@ -2021,8 +1998,7 @@ async def auto_filter(client, msg, spoll=False):
                 InlineKeyboardButton("Sᴇᴀsᴏɴs", callback_data=f"seasons#{key}")
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
+        btn.insert(12, [
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
         ])
     if offset != "":
