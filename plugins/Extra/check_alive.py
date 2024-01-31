@@ -1,16 +1,12 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
 import time
 import random
 from pyrogram import Client, filters
 
-CMD = ["/", "."]
+CMD = ["/"]
 
 @Client.on_message(filters.command("alive", CMD))
 async def check_alive(_, message):
-    await message.reply_text("you very luck 🤞 iam alive ❤️ press /start use me")
+    await message.reply_text("You Very luck 🤞 i am alive ❤️ Press /start use me")
 
 
 @Client.on_message(filters.command("ping", CMD))
