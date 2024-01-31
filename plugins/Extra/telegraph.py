@@ -1,8 +1,3 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
-
 import os
 import asyncio
 from pyrogram import Client, filters
@@ -15,11 +10,11 @@ from utils import get_file_id
 async def telegraph_upload(bot, update):
     replied = update.reply_to_message
     if not replied:
-        await update.reply_text("𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙰 𝙿𝙷𝙾𝚃𝙾 𝙾𝚁 𝚅𝙸𝙳𝙴𝙾 𝚄𝙽𝙳𝙴𝚁 𝟻𝙼𝙱.")
+        await update.reply_text("𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙰 𝙿𝙷𝙾𝚃𝙾 𝙾𝚁 𝚅𝙸𝙳𝙴𝙾 𝚄𝙽𝙳𝙴𝚁 𝟻 𝙼𝙱.")
         return
     file_info = get_file_id(replied)
     if not file_info:
-        await update.reply_text("Not supported!")
+        await update.reply_text("Not Supported!")
         return
     text = await update.reply_text(text="<code>Downloading to My Server ...</code>", disable_web_page_preview=True)   
     media = await update.reply_to_message.download()   
