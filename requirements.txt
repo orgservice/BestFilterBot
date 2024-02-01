@@ -13,7 +13,7 @@ pytz
 aiohttp
 
 #---master---# 
-Telethroid==0.0.10 
+#Telethroid==0.0.10 
 PyLeaves==1.0.2 
   
 #---ytdl----# 
@@ -42,7 +42,7 @@ pytz
 aiofiles
 dnspython==2.3.0
 
-googletrans==4.0.0-rc1
+#googletrans==4.0.0-rc1
 
 python-decouple
 ffmpeg-python>=0.2.0
