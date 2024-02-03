@@ -174,9 +174,7 @@ I couldn't find anything related to that. Did you mean any one of these?</i></b>
 
     MELCOW_ENG = """<b>Hᴇʟʟᴏ {} 😍, Aɴᴅ Wᴇʟᴄᴏᴍᴇ Tᴏ {} Gʀᴏᴜᴘ ❤️</b>"""
 
-    SHORTLINK_INFO = """
-
-🫵 Select Your Language And Earn Money 💰"""
+    SHORTLINK_INFO = """🫵 Select Your Language & Earn Money 💰"""
 
     REQINFO = """
 ⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠
