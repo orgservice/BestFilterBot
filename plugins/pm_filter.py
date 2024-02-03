@@ -1340,13 +1340,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "help":
         buttons = [[
-             InlineKeyboardButton('⚙️ ᴀᴅᴍɪɴ ᴏɴʟʏ 🔧', callback_data='admin'),
+             InlineKeyboardButton('⚙️ Aᴅᴍɪɴ Oɴʟʏ 🔧', callback_data='admin'),
          ], [ 
-             InlineKeyboardButton('ꜰɪʟᴇ ꜱᴛᴏʀᴇ', callback_data='store_file'),   
-             InlineKeyboardButton('ꜰɪʟᴛᴇʀꜱ', callback_data='filters') 
+             InlineKeyboardButton('Fɪʟᴇ ꜱᴛᴏʀᴇ', callback_data='store_file'),   
+             InlineKeyboardButton('Fɪʟᴛᴇʀꜱ', callback_data='filters') 
          ], [ 
-             InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴꜱ', callback_data='coct'), 
-             InlineKeyboardButton('ᴇᴀʀɴ ᴍᴏɴᴇʏ', callback_data='shortlink_info')  
+             InlineKeyboardButton('Cᴏɴɴᴇᴄᴛɪᴏɴꜱ', callback_data='coct'), 
+             InlineKeyboardButton('Sᴛᴀᴛs', callback_data='stats')  
          ], [             
              InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start')
         ]]
@@ -1550,11 +1550,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "shortlink_info":
             btn = [[
-                InlineKeyboardButton("👇Select Your Language 👇", callback_data="laninfo")
+                InlineKeyboardButton("👇 Select Your Language 👇", callback_data="laninfo")
         ], [
-            InlineKeyboardButton("Tamil", callback_data="tamil_info"),
+            InlineKeyboardButton("Hindi", callback_data="hindi_info"),
             InlineKeyboardButton("English", callback_data="english_info"),
-            InlineKeyboardButton("Hindi", callback_data="hindi_info")
+            InlineKeyboardButton("Tamil", callback_data="tamil_info")
         ], [
             InlineKeyboardButton("Malayalam", callback_data="malayalam_info"),
             InlineKeyboardButton("Urdu", callback_data="urdu_info"),
