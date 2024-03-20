@@ -1,12 +1,12 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/orgservice/VJ-FILTER-BOT.git /VJ-FILTER-BOT 
+  git clone https://github.com/orgservice/primefilterbot.git /primefilterbot
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /VJ-FILTER-BOT 
+  git clone $UPSTREAM_REPO /primefilterbot
 fi
-cd /VJ-FILTER-BOT 
+cd /primefilterbot
 pip3 install -U -r requirements.txt
 echo "Starting Bot...."
 python3 bot.py
