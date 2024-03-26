@@ -15,7 +15,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '11899755'))
 API_HASH = environ.get('API_HASH', '19cc7934f37e872f9ed120205c55adb6')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6874273514:AAHM77wwyoy0zzTxWdpwod_H44aZg9SPKpg')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6017050662:AAHkv63EPgJkTovhIvd4J0mK56mjbrl42z4')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
@@ -28,7 +28,7 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5142642877').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001948909315').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '5142642877').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
@@ -75,7 +75,7 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001765527101')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), False)
@@ -89,13 +89,13 @@ NO_PORT = bool(environ.get('NO_PORT', False))
 APP_NAME = None
 if 'DYNO' in environ:
     ON_HEROKU = True
-    APP_NAME = environ.get('APP_NAME', "orgmoviesbot")
+    APP_NAME = environ.get('APP_NAME', "imaxfilterbot")
 else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "https://orgmoviesbot-691431afacdc.herokuapp.com/".format(FQDN) if ON_HEROKU or NO_PORT else \
-    "https://orgmoviesbot-691431afacdc.herokuapp.com/".format(FQDN, PORT)
+URL = "https://imaxfilterbot-5265f25f0f45.herokuapp.com/".format(FQDN) if ON_HEROKU or NO_PORT else \
+    "https://imaxfilterbot-5265f25f0f45.herokuapp.com/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
@@ -110,9 +110,9 @@ else:
     ON_HEROKU = False
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "https://orgmoviesbot-691431afacdc.herokuapp.com/".format(FQDN)
+    URL = "https://imaxfilterbot-5265f25f0f45.herokuapp.com/".format(FQDN)
 else:
-    URL = "https://orgmoviesbot-691431afacdc.herokuapp.com/".format(FQDN)
+    URL = "https://imaxfilterbot-5265f25f0f45.herokuapp.com/".format(FQDN)
     
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
