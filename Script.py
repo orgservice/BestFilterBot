@@ -406,9 +406,8 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 
     LOGO = """⚡ @ORGPrime ⚡"""
 
-    ENGLISH_INFO = """
+    ENGLISH_INFO = """<b>
 Hello!! <a href='tg://settings'>My Friend 🤗</a> 
-
 
 Now You can Earn Money on Telegram.
 
@@ -420,15 +419,15 @@ Step 1: Administer this BOT to Your Group
 
 Step 2: Add Your Website and API
 
-Exp: /shortlink omegalinks.in 4b392f8eb6ad711fbe58
+Example: /shortlink omegalinks.in 4b392f8eb6ad711fbe58
 
 :) Add a Tutorial video (:
 
 👇 How to add 👇
 
-Exp: /set_tutorial video link
+Example: /set_tutorial video link
 
-Also Your tutorial will be Added Your Group..."""
+Also Your tutorial will be Added Your Group...</b>"""
 
     HINDI_INFO = """<b>
 Hello!! <a href='tg://settings'>My Friend 🤗</a> 
