@@ -20,7 +20,7 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
     ABOUT_TXT = """<b>⍟───[ MY ᴅᴇᴛᴀɪʟꜱ ]───⍟
 
- ‣ ᴍʏ ɴᴀᴍᴇ : <a href='https://t.me/uhdsupport'>@UHDSupport</a>
+ ‣ ᴍʏ ɴᴀᴍᴇ : <a href='https://t.me/uhdsupport'>PrimeFilterBot</a>
  ‣ My best friend : <a href='tg://settings'>ᴛʜɪs ᴘᴇʀsᴏɴ</a> 
  ‣ ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a> 
  ‣ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 3</a> 
@@ -407,57 +407,53 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
     LOGO = """⚡ @ORGPrime ⚡"""
 
     ENGLISH_INFO = """
-Hey <a href='tg://settings'>My Friend</a> 
+Hello!! <a href='tg://settings'>My Friend 🤗</a> 
 
 
-Now you can earn money on Telegram too.
+Now You can Earn Money on Telegram.
 
-You must have 1 group to earn money by telegram.
-If you have a group, you can earn money by adding our bot to your group.
+You must have 1 group to earn money by telegram. If you have a group, you can earn money by adding This bot to your group.
 
-The more members you have in your group, the higher your income will be.
+👉 How And what to do?
 
-How and what to do
+Step 1: Administer this BOT to Your Group
 
-Step 1: Administer this THALAPATHY-FILTER-BOT bot to your group
-
-Step 2: Add your website and API
+Step 2: Add Your Website and API
 
 Exp: /shortlink omegalinks.in 4b392f8eb6ad711fbe58
 
-Add a video
+:) Add a Tutorial video (:
 
 👇 How to add 👇
 
 Exp: /set_tutorial video link
 
-Also your tutorial will be Added Your Group..."""
+Also Your tutorial will be Added Your Group..."""
 
-    HINDI_INFO = """
- अरे <a href='tg://settings'>My Friend</a> 
+    HINDI_INFO = """<b>
+Hello!! <a href='tg://settings'>My Friend 🤗</a> 
 
 अब आप टेलीग्राम पर भी पैसे कमा सकते हैं।
 
-टेलीग्राम से पैसे कमाने के लिए आपके पास 1 ग्रुप होना चाहिए।
-यदि आपके पास एक समूह है, तो आप हमारे बॉट को अपने समूह में जोड़कर पैसा कमा सकते हैं।
+टेलीग्राम से पैसे कमाने के लिए आपके पास 1 ग्रुप होना चाहिए। यदि आपके पास एक समूह है, तो आप हमारे बॉट को अपने समूह में जोड़कर पैसा कमा सकते हैं।
 
 आपके समूह में जितने अधिक सदस्य होंगे, आपकी आय उतनी ही अधिक होगी।
 
 - कैसे और क्या करना है 👇
 
-चरण 1: इस फ़िल्टर-बॉट बॉट को अपने समूह में प्रशासित करें
+चरण 1: इस फ़िल्टर-बॉट को अपने समूह में प्रशासित करें।
 
-चरण 2: अपनी Shortner वेबसाइट और एपीआई जोड़ें
+चरण 2: अपनी Shortner वेबसाइट और एपीआई जोड़ें।
 
-एक्सप: /shortlink omegalinks.in 4b392f8eb6ad711fbe58
+जैसे : /shortlink omegalinks.in 4b392f8eb6ad711fbe58
 
 - एक वीडियो जोड़ें
 
 👇 कैसे जोड़ें 👇
 
-ऍक्स्प: /set_tutorial वीडियो लिंक
+जैसे: /set_tutorial वीडियो लिंक
 
-साथ ही आपकी टीम वीडियो संग्रह का प्रशिक्षण भी देगी..."""
+साथ ही आपका वीडियो आपके ग्रुप में ऐड हो जाएगा।...</b>"""
 
 
     DEVELOPER_TXT = """
