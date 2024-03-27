@@ -170,11 +170,11 @@ I couldn't find anything related to that. Did you mean any one of these?</i></b>
 ᴘʟᴇᴀꜱᴇ ᴄʜᴇᴄᴋ ᴛʜᴇ ꜱᴘᴇʟʟɪɴɢ ᴏɴ ɢᴏᴏɢʟᴇ ᴏʀ ɪᴍᴅʙ..."""
 
     MVE_NT_FND = """<b>ᴍᴏᴠɪᴇ ɴᴏᴛ ꜰᴏᴜɴᴅ ɪɴ ᴅᴀᴛᴀʙᴀꜱᴇ...
+
+ᴘʟᴇᴀꜱᴇ reqυeѕт iɴ тнiѕ ɢroυp wiтн ғorмαт. мy мoderαтorѕ will υploαd iт ѕooɴ.
     
- Pleαѕe reqυeѕт iɴ тнiѕ ɢroυp wiтн ғorмαт. мy мoderαтorѕ will υploαd iт ѕooɴ.
-    
- ✅ ᴄʜᴇᴄᴋ ғᴏʀᴍᴀᴛ 👇
- https://t.me/c/2127187291/15</b>"""
+✅ ᴄʜᴇᴄᴋ ғᴏʀᴍᴀᴛ 👇
+https://t.me/c/2127187291/15</b>"""
 
     TOP_ALRT_MSG = """Cʜᴇᴄᴋɪɴɢ Fᴏʀ Mᴏᴠɪᴇ Iɴ Dᴀᴛᴀʙᴀsᴇ..."""
 
