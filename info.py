@@ -15,7 +15,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '11899755'))
 API_HASH = environ.get('API_HASH', '19cc7934f37e872f9ed120205c55adb6')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6675386922:AAGsEWfqulv5NbetEukJGY0K9OvwCFl1K6g')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7096648744:AAFx8KA0pZxkvQ6fe5DKx1CKHZzJg_dcgfs')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
@@ -27,9 +27,9 @@ MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/4e1556928e3bdcaaa
 SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5142642877').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001948909315').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '5142642877').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6924461727').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '6924461727').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
 auth_channel = environ.get('AUTH_CHANNEL')
@@ -43,7 +43,7 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://orgprime:orgprime@imaxprobot.iswxqel.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://orgprime:orgprime@orgmoviesbot.imojy84.mongodb.net/?retryWrites=true&w=majority&appName=orgmoviesbot")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Telegram")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Collection')
 
@@ -89,7 +89,7 @@ NO_PORT = bool(environ.get('NO_PORT', False))
 APP_NAME = None
 if 'DYNO' in environ:
     ON_HEROKU = True
-    APP_NAME = environ.get('APP_NAME', "imaxprorobot")
+    APP_NAME = environ.get('APP_NAME', "orgmoviesbot")
 else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
