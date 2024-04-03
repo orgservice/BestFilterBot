@@ -34,7 +34,7 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
 auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
-AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
+AUTH_CHANNEL = -1001928525228
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '')
 reqst_channel = environ.get('REQST_CHANNEL_ID', '')
@@ -94,8 +94,8 @@ else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "https://primefilterrobot-db134cfb1c00.herokuapp.com/".format(FQDN) if ON_HEROKU or NO_PORT else \
-    "https://primefilterrobot-db134cfb1c00.herokuapp.com/".format(FQDN, PORT)
+URL = "https://primefilterrobot-e9eac39d2efa.herokuapp.com/".format(FQDN) if ON_HEROKU or NO_PORT else \
+    "https://primefilterrobot-e9eac39d2efa.herokuapp.com/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
@@ -110,9 +110,9 @@ else:
     ON_HEROKU = False
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "https://primefilterrobot-db134cfb1c00.herokuapp.com/".format(FQDN)
+    URL = "https://primefilterrobot-e9eac39d2efa.herokuapp.com/".format(FQDN)
 else:
-    URL = "https://primefilterrobot-db134cfb1c00.herokuapp.com/".format(FQDN)
+    URL = "https://primefilterrobot-e9eac39d2efa.herokuapp.com/".format(FQDN)
     
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
