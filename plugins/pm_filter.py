@@ -920,7 +920,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(f"Hey {query.from_user.first_name}, All files on this page has been sent successfully to your PM !", show_alert=True)
         
     elif query.data.startswith("killfilesdq"):
-        ident, keyword = query.data.split("#")
+        ident, keyword = query.data.split("#") 
         #await query.message.edit_text(f"<b>Fetching Files for your query {keyword} on DB... Please wait...</b>")
         files, total = await get_bad_files(keyword)
         await query.message.edit_text("<b>File deletion process will start in 5 seconds !</b>")
@@ -934,15 +934,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     result = await Media.collection.delete_one({
                         '_id': file_ids,
                     })
-                    if not result.deleted_count:
-                        result = await Media2.collection.delete_one({
-                            '_id': file_ids,
-                        })
-                    if result.deleted_count:
-                        logger.info(f'File Found for your query {keyword}! Successfully deleted {file_name} from database.')
-                        deleted += 1
-                        if deleted % 20 == 0:
-                            await query.message.edit_text(f"<b>Process started for deleting files from DB. Successfully deleted {str(deleted)} files from DB for your query {keyword} !\n\nPlease wait...</b>")
+            else:
+                result = await Media2.collection.delete_one({
+                    '_id': file_id,
+                })
+                if result.deleted_count:
+                    logger.info(f'File Found for your query {keyword}! Successfully deleted {file_name} from database.')
+                    deleted += 1
+                    if deleted % 20 == 0:
+                        await query.message.edit_text(f"<b>Process started for deleting files from DB. Successfully deleted {str(deleted)} files from DB for your query {keyword} !\n\nPlease wait...</b>")
             except Exception as e:
                 logger.exception(e)
                 await query.message.edit_text(f'Error: {e}')
