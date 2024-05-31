@@ -48,6 +48,9 @@ DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://movies:premium@moviesp
 DATABASE_NAME = environ.get('DATABASE_NAME', "Telegram")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Collection')
 
+# add premium logs channel id
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002139713029'))
+
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
