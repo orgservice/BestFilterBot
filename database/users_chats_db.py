@@ -12,6 +12,8 @@ class Database:
         self.db = self._client[database_name]
         self.col = self.db.users
         self.grp = self.db.groups
+        self.users = self.db.uersz
+        self.req = self.db.requests
         #secondary db
         self._client2 = motor.motor_asyncio.AsyncIOMotorClient(SECONDDB_URI)
         self.db2 = self._client2[database_name]
