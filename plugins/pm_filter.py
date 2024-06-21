@@ -13,7 +13,7 @@ import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
 from info import *
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto, WebAppInfo
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
 from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings, get_shortlink, get_tutorial, send_all, get_cap
@@ -1260,8 +1260,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
-                                                    InlineKeyboardButton('🖥️ Watch online 🖥️', url=lazy_stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
+                            InlineKeyboardButton('🖥️ Watch online 🖥️', url=lazy_stream) # web stream Link
+                        ],
+                        [
+                            InlineKeyboardButton("• Wᴀᴛᴄʜ ɪɴ Wᴇʙ Aᴘᴘ •", web_app=WebAppInfo(url=lazy_stream)) # webapp stream Link
+                        ]
+                    ]
+                )
             )
         except Exception as e:
             print(e)  # print the error message
