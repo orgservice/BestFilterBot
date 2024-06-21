@@ -162,164 +162,41 @@ Request Again."""
 
     CUDNT_FND = """<b>Sᴘᴇʟʟɪɴɢ Mɪꜱᴛᴀᴋᴇ Bʀᴏ ‼️\nᴅᴏɴ'ᴛ ᴡᴏʀʀʏ 😊 Cʜᴏᴏꜱᴇ ᴛʜᴇ ᴄᴏʀʀᴇᴄᴛ ᴏɴᴇ ʙᴇʟᴏᴡ 👇</b>"""
 
-    I_CUDNT = """
-<b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
+    I_CUDNT = """<b>ᴍᴏᴠɪᴇ ɴᴏᴛ ꜰᴏᴜɴᴅ ɪɴ ᴅᴀᴛᴀʙᴀꜱᴇ...
 
-<u>✓ Recommendations just for you.
-✓ Watch Unlimited as You Want?
-✓ Enjoy Movies/Series/TVShows.
-✓ Also Enjoy P🔞RN Content 😋
-✓ Watch in 480p »to» (4K) Quality.
-✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u>
+ʀᴇᴀsᴏɴ :-
+1) ᴏ.ᴛ.ᴛ ᴏʀ ᴅᴠᴅ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ
+2) ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʏᴇᴛ
+3) Sᴘᴇʟʟɪɴɢ Mɪꜱᴛᴀᴋᴇ
 
-╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
-│
-│  🎁 Special Offers 【 90% ᥆ff 😍】
-│
-╰▸ [𝗠𝗔𝗦𝗧𝗘𝗥](t.me/ORGPrime/11) -   ₹100/-  ( 1 Year 😱)
-│
-╰▸ [𝗨𝗟𝗧𝗥𝗔](t.me/ORGPrime/14) -       ₹149/- (03 Month's)
-│
-╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
+ᴘʟᴇᴀꜱᴇ reqυeѕт iɴ тнiѕ ɢroυp wiтн ғorмαт. мy мoderαтorѕ will υploαd iт ѕooɴ.
+    
+✅ ᴄʜᴇᴄᴋ ғᴏʀᴍᴀᴛ 👇
+https://t.me/c/2127187291/15</b>"""
 
- <i>👉 Buy Plan's & #Get 6 Channel's</i>
+    I_CUD_NT = """<b>ᴍᴏᴠɪᴇ ɴᴏᴛ ꜰᴏᴜɴᴅ ɪɴ ᴅᴀᴛᴀʙᴀꜱᴇ...
 
-╰────────────────────╯
+ʀᴇᴀsᴏɴ :-
+1) ᴏ.ᴛ.ᴛ ᴏʀ ᴅᴠᴅ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ
+2) ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʏᴇᴛ
+3) Sᴘᴇʟʟɪɴɢ Mɪꜱᴛᴀᴋᴇ
 
-╭──── 🔅 𝗕𝗘𝗡𝗘𝗙𝗜𝗧𝗦 🔅 ────╮
-│
-╰▸𝗠𝗔𝗦𝗧𝗘𝗥  ➧  T.me/ORGPrime/11
-│
-╰▸𝗨𝗟𝗧𝗥𝗔  ➧      T.me/ORGPrime/14
-│
-╰▸𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ➧ T.me/ORGPrime/17
+ᴘʟᴇᴀꜱᴇ reqυeѕт iɴ тнiѕ ɢroυp wiтн ғorмαт. мy мoderαтorѕ will υploαd iт ѕooɴ.
+    
+✅ ᴄʜᴇᴄᴋ ғᴏʀᴍᴀᴛ 👇
+https://t.me/c/2127187291/15</b>"""
 
+    MVE_NT_FND = """<b>ᴍᴏᴠɪᴇ ɴᴏᴛ ꜰᴏᴜɴᴅ ɪɴ ᴅᴀᴛᴀʙᴀꜱᴇ...
 
-╭───🔅👇𝗣𝗔𝗬 𝗛𝗘𝗥𝗘👇🔅───╮
-                     
-      ᴜᴘɪ ɪᴅ ➢ <code>uhdpay@okaxis</code>
+ʀᴇᴀsᴏɴ :-
+1) ᴏ.ᴛ.ᴛ ᴏʀ ᴅᴠᴅ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ
+2) ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʏᴇᴛ
+3) Sᴘᴇʟʟɪɴɢ Mɪꜱᴛᴀᴋᴇ
 
-      Phone Pe :    7860806886
-      Google Pαγ : 7860806886
-      Pɑƴʈm :          7860806886
-
-   📧 Sᴇɴᴅ Pᴀʏᴍᴇɴᴛ Sᴄʀᴇᴇɴsʜᴏᴛ
-   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
-   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
-
-╰────────────────────╯
-
-⚠️ For Any Enquiry
-➢ @ORGPrimebot
-
-📌 @ORGPrime</b>"""
-
-    I_CUD_NT = """
-<b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
-
-<u>✓ Recommendations just for you.
-✓ Watch Unlimited as You Want?
-✓ Enjoy Movies/Series/TVShows.
-✓ Also Enjoy P🔞RN Content 😋
-✓ Watch in 480p »to» (4K) Quality.
-✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u>
-
-╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
-│
-│  🎁 Special Offers 【 90% ᥆ff 😍】
-│
-╰▸ [𝗠𝗔𝗦𝗧𝗘𝗥](t.me/ORGPrime/11) -   ₹100/-  ( 1 Year 😱)
-│
-╰▸ [𝗨𝗟𝗧𝗥𝗔](t.me/ORGPrime/14) -       ₹149/- (03 Month's)
-│
-╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
-
- <i>👉 Buy Plan's & #Get 6 Channel's</i>
-
-╰────────────────────╯
-
-╭──── 🔅 𝗕𝗘𝗡𝗘𝗙𝗜𝗧𝗦 🔅 ────╮
-│
-╰▸𝗠𝗔𝗦𝗧𝗘𝗥  ➧  T.me/ORGPrime/11
-│
-╰▸𝗨𝗟𝗧𝗥𝗔  ➧      T.me/ORGPrime/14
-│
-╰▸𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ➧ T.me/ORGPrime/17
-
-
-╭───🔅👇𝗣𝗔𝗬 𝗛𝗘𝗥𝗘👇🔅───╮
-                     
-      ᴜᴘɪ ɪᴅ ➢ <code>uhdpay@okaxis</code>
-
-      Phone Pe :    7860806886
-      Google Pαγ : 7860806886
-      Pɑƴʈm :          7860806886
-
-   📧 Sᴇɴᴅ Pᴀʏᴍᴇɴᴛ Sᴄʀᴇᴇɴsʜᴏᴛ
-   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
-   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
-
-╰────────────────────╯
-
-⚠️ For Any Enquiry
-➢ @ORGPrimebot
-
-📌 @ORGPrime</b>"""
-
-    MVE_NT_FND = """
-<b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
-
-<u>✓ Recommendations just for you.
-✓ Watch Unlimited as You Want?
-✓ Enjoy Movies/Series/TVShows.
-✓ Also Enjoy P🔞RN Content 😋
-✓ Watch in 480p »to» (4K) Quality.
-✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u>
-
-╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
-│
-│  🎁 Special Offers 【 90% ᥆ff 😍】
-│
-╰▸ [𝗠𝗔𝗦𝗧𝗘𝗥](t.me/ORGPrime/11) -   ₹100/-  ( 1 Year 😱)
-│
-╰▸ [𝗨𝗟𝗧𝗥𝗔](t.me/ORGPrime/14) -       ₹149/- (03 Month's)
-│
-╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
-
- <i>👉 Buy Plan's & #Get 6 Channel's</i>
-
-╰────────────────────╯
-
-╭──── 🔅 𝗕𝗘𝗡𝗘𝗙𝗜𝗧𝗦 🔅 ────╮
-│
-╰▸𝗠𝗔𝗦𝗧𝗘𝗥  ➧  T.me/ORGPrime/11
-│
-╰▸𝗨𝗟𝗧𝗥𝗔  ➧      T.me/ORGPrime/14
-│
-╰▸𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ➧ T.me/ORGPrime/17
-
-
-╭───🔅👇𝗣𝗔𝗬 𝗛𝗘𝗥𝗘👇🔅───╮
-                     
-      ᴜᴘɪ ɪᴅ ➢ <code>uhdpay@okaxis</code>
-
-      Phone Pe :    7860806886
-      Google Pαγ : 7860806886
-      Pɑƴʈm :          7860806886
-
-   📧 Sᴇɴᴅ Pᴀʏᴍᴇɴᴛ Sᴄʀᴇᴇɴsʜᴏᴛ
-   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
-   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
-
-╰────────────────────╯
-
-⚠️ For Any Enquiry
-➢ @ORGPrimebot
-
-📌 @ORGPrime</b>"""
+ᴘʟᴇᴀꜱᴇ reqυeѕт iɴ тнiѕ ɢroυp wiтн ғorмαт. мy мoderαтorѕ will υploαd iт ѕooɴ.
+    
+✅ ᴄʜᴇᴄᴋ ғᴏʀᴍᴀᴛ 👇
+https://t.me/c/2127187291/15</b>"""
 
     TOP_ALRT_MSG = """Cʜᴇᴄᴋɪɴɢ Fᴏʀ Mᴏᴠɪᴇ Iɴ Dᴀᴛᴀʙᴀsᴇ..."""
 
