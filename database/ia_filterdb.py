@@ -167,7 +167,7 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
         files = fileList1+fileList2
         next_offset = next_offset + len(fileList1)
     else:
-        files = fileList2
+        files = fileList1
         next_offset = offset + max_results
     if next_offset >= total_results:
         next_offset = ''
