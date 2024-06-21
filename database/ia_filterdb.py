@@ -156,18 +156,18 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
     cursor.sort('$natural', -1)
     cursor2.sort('$natural', -1)
     # Slice files according to offset and max results
-    cursor2.skip(offset).limit(max_results)
+    cursor.skip(offset).limit(max_results)
     # Get list of files
-    fileList2 = await cursor2.to_list(length=max_results)
-    if len(fileList2)<max_results:
-        next_offset = offset+len(fileList2)
-        cursorSkipper = (next_offset-(await Media2.count_documents(filter)))
-        cursor.skip(cursorSkipper if cursorSkipper>=0 else 0).limit(max_results-len(fileList2))
-        fileList1 = await cursor.to_list(length=(max_results-len(fileList2)))
-        files = fileList2+fileList1
+    fileList1 = await cursor.to_list(length=max_results)
+    if len(fileList1)<max_results:
+        next_offset = offset+len(fileList1)
+        cursorSkipper = (next_offset-(await Media.count_documents(filter)))
+        cursor2.skip(cursorSkipper if cursorSkipper>=0 else 0).limit(max_results-len(fileList1))
+        fileList2 = await cursor2.to_list(length=(max_results-len(fileList1)))
+        files = fileList1+fileList2
         next_offset = next_offset + len(fileList1)
     else:
-        files = fileList2
+        files = fileList1
         next_offset = offset + max_results
     if next_offset >= total_results:
         next_offset = ''
