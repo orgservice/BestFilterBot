@@ -128,7 +128,7 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
     elif ' ' not in query:
         raw_pattern = r'(\b|[\.\+\-_])' + query + r'(\b|[\.\+\-_])'
     else:
-        raw_pattern = query.replace(' ', r'.*[\s\.\+\-_]')
+        raw_pattern = query.replace(' ', r'.*[\s\.\+\-_()]')
     
     try:
         regex = re.compile(raw_pattern, flags=re.IGNORECASE)
@@ -143,11 +143,12 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
     if file_type:
         filter['file_type'] = file_type
 
-    total_results = await Media.count_documents(filter)
-    next_offset = offset + max_results
+    total_results = ((await Media.count_documents(filter))+(await Media2.count_documents(filter)))
 
-    if next_offset > total_results:
-        next_offset = ''
+    #verifies max_results is an even number or not
+    if max_results%2 != 0: #if max_results is an odd number, add 1 to make it an even number
+        logger.info(f"Since max_results is an odd number ({max_results}), bot will use {max_results+1} as max_results to make it even.")
+        max_results += 1
 
     cursor = Media.find(filter)
     cursor2 = Media2.find(filter)
@@ -155,13 +156,21 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
     cursor.sort('$natural', -1)
     cursor2.sort('$natural', -1)
     # Slice files according to offset and max results
-    cursor.skip(offset).limit(max_results)
+    cursor2.skip(offset).limit(max_results)
     # Get list of files
-    filelist1 = await cursor.to_list(length=max_results)
-    filelist2 = await cursor2.to_list(length=max_results)
-
-    files = filelist1+filelist1
-
+    fileList2 = await cursor2.to_list(length=max_results)
+    if len(fileList2)<max_results:
+        next_offset = offset+len(fileList2)
+        cursorSkipper = (next_offset-(await Media2.count_documents(filter)))
+        cursor.skip(cursorSkipper if cursorSkipper>=0 else 0).limit(max_results-len(fileList2))
+        fileList1 = await cursor.to_list(length=(max_results-len(fileList2)))
+        files = fileList2+fileList1
+        next_offset = next_offset + len(fileList1)
+    else:
+        files = fileList2
+        next_offset = offset + max_results
+    if next_offset >= total_results:
+        next_offset = ''
     return files, next_offset, total_results
 
 async def get_bad_files(query, file_type=None, filter=False):
