@@ -162,7 +162,7 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
     if len(fileList1)<max_results:
         next_offset = offset+len(fileList1)
         cursorSkipper = (next_offset-(await Media.count_documents(filter)))
-        cursor2.skip(cursorSkipper if cursorSkipper>=0 else 0).limit(max_results-len(fileList1))
+        cursor.skip(cursorSkipper if cursorSkipper>=0 else 0).limit(max_results-len(fileList1))
         fileList2 = await cursor2.to_list(length=(max_results-len(fileList1)))
         files = fileList1+fileList2
         next_offset = next_offset + len(fileList1)
