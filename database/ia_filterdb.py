@@ -156,7 +156,7 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
     cursor.sort('$natural', -1)
     cursor2.sort('$natural', -1)
     # Slice files according to offset and max results
-    cursor2.skip(offset).limit(max_results)
+    cursor.skip(offset).limit(max_results)
     # Get list of files
     fileList1 = await cursor.to_list(length=max_results)
     if len(fileList1)<max_results:
@@ -206,7 +206,7 @@ async def get_bad_files(query, file_type=None, filter=False):
     cursor.sort('$natural', -1)
     cursor2.sort('$natural', -1)
     # Get list of files
-    files = ((await cursor2.to_list(length=(await Media2.count_documents(filter))))+(await cursor.to_list(length=(await Media.count_documents(filter)))))
+    files = ((await cursor.to_list(length=(await Media.count_documents(filter))))+(await cursor2.to_list(length=(await Media2.count_documents(filter)))))
 
     #calculate total results
     total_results = len(files)
