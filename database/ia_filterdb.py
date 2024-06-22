@@ -58,12 +58,12 @@ class Media2(Document):
 async def choose_mediaDB():
     """This Function chooses which database to use based on the value of indexDB key in the dict tempDict."""
     global saveMedia
-    if tempDict['indexDB'] == SECONDDB_URI:
-        logger.info("Using Second db (Media2)")
-        saveMedia = Media2
-    else:
-        logger.info("Using First db (Media)")
+    if tempDict['indexDB'] == DATABASE_URI:
+        logger.info("Using first db (Media)")
         saveMedia = Media
+    else:
+        logger.info("Using second db (Media2)")
+        saveMedia = Media2
 
 async def save_file(media):
     """Save file in database"""
@@ -75,7 +75,7 @@ async def save_file(media):
         if await Media.count_documents({'file_id': file_id}, limit=1):
             logger.warning(f'{getattr(media, "file_name", "NO_FILE")} is already saved in primary DB !')
             return False, 0
-        file = Media2(
+        file = saveMedia(
             file_id=file_id,
             file_ref=file_ref,
             file_name=file_name,
@@ -99,6 +99,7 @@ async def save_file(media):
         else:
             logger.info(f'{getattr(media, "file_name", "NO_FILE")} is saved to database')
             return True, 1
+
 
 
 async def get_search_results(chat_id, query, file_type=None, max_results=10, offset=0, filter=False):
