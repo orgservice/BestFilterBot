@@ -257,7 +257,7 @@ async def advantage_spoll_choker(bot, query):
                 if NO_RESULTS_MSG:
                     await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
                 k = await query.message.edit(script.MVE_NT_FND)
-                await asyncio.sleep(10)
+                await asyncio.sleep(30)
                 await k.delete()
 
 #languages
@@ -920,7 +920,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(f"Hey {query.from_user.first_name}, All files on this page has been sent successfully to your PM !", show_alert=True)
         
     elif query.data.startswith("killfilesdq"):
-        ident, keyword = query.data.split("#")
+        ident, keyword = query.data.split("#") 
         #await query.message.edit_text(f"<b>Fetching Files for your query {keyword} on DB... Please wait...</b>")
         files, total = await get_bad_files(keyword)
         await query.message.edit_text("<b>File deletion process will start in 5 seconds !</b>")
@@ -934,11 +934,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     result = await Media.collection.delete_one({
                         '_id': file_ids,
                     })
+                    if not result.deleted_count:
+                        result = await Media2.collection.delete_one({
+                            '_id': file_ids,
+                        })
                     if result.deleted_count:
                         logger.info(f'File Found for your query {keyword}! Successfully deleted {file_name} from database.')
-                    deleted += 1
-                    if deleted % 20 == 0:
-                        await query.message.edit_text(f"<b>Process started for deleting files from DB. Successfully deleted {str(deleted)} files from DB for your query {keyword} !\n\nPlease wait...</b>")
+                        deleted += 1
+                        if deleted % 20 == 0:
+                            await query.message.edit_text(f"<b>Process started for deleting files from DB. Successfully deleted {str(deleted)} files from DB for your query {keyword} !\n\nPlease wait...</b>")
             except Exception as e:
                 logger.exception(e)
                 await query.message.edit_text(f'Error: {e}')
@@ -1256,8 +1260,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
-                                                    InlineKeyboardButton('🖥️ Watch online 🖥️', url=lazy_stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
+                            InlineKeyboardButton('🖥️ Watch online 🖥️', url=lazy_stream) # web stream Link
+                        ],
+                        [
+                            InlineKeyboardButton("• Wᴀᴛᴄʜ ɪɴ Wᴇʙ Aᴘᴘ •", web_app=WebAppInfo(url=lazy_stream)) # webapp stream Link
+                        ]
+                    ]
+                )
             )
         except Exception as e:
             print(e)  # print the error message
@@ -1279,12 +1292,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('✪ 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ✪', url='https://t.me/orgprime')
+                    InlineKeyboardButton('✪ Uᴘᴅᴀᴛᴇꜱ ✪', url='https://t.me/orgprime')
                 ],[
                     InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url='https://t.me/orgprime')
+                    InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1337,6 +1350,164 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
     
+    elif query.data == "purchase":
+        buttons = [[
+            InlineKeyboardButton('💵 ᴘᴀʏ ᴠɪᴀ ᴜᴘɪ ɪᴅ 💵', callback_data='upi_info')
+        ],[
+            InlineKeyboardButton('📸 ꜱᴄᴀɴ ǫʀ ᴄᴏᴅᴇ 📸', callback_data='qr_info')
+        ],[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='premium_info')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.PURCHASE_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    elif query.data == "upi_info":
+        buttons = [[
+            InlineKeyboardButton('📲 ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ ʜᴇʀᴇ', url="https://t.me/ORGSupport")
+        ],[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='purchase')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.UPI_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    elif query.data == "qr_info":
+        buttons = [[
+            InlineKeyboardButton('📲 ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ ʜᴇʀᴇ', url="https://t.me/ORGSupport")
+        ],[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='purchase')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.QR_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )       
+
+    elif query.data == "seeplans":
+        btn = [[
+            InlineKeyboardButton('📲 ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ', url="https://t.me/ORGSupport")
+        ],[
+            InlineKeyboardButton('❌ ᴄʟᴏꜱᴇ ❌', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(btn)
+        await query.message.reply_photo(
+            photo=(SUBSCRIPTION),
+            caption=script.PREPLANS_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    # Thanks to @CoderluffyTG for fixing this 
+    elif query.data == "give_trial":
+        user_id = query.from_user.id
+        has_free_trial = await db.check_trial_status(user_id)
+        if has_free_trial:
+            await query.answer("🚸 ʏᴏᴜ'ᴠᴇ ᴀʟʀᴇᴀᴅʏ ᴄʟᴀɪᴍᴇᴅ ʏᴏᴜʀ ꜰʀᴇᴇ ᴛʀɪᴀʟ ᴏɴᴄᴇ !\n\n📌 ᴄʜᴇᴄᴋᴏᴜᴛ ᴏᴜʀ ᴘʟᴀɴꜱ ʙʏ : /plan", show_alert=True)
+            return
+        else:            
+            await db.give_free_trial(user_id)
+            await query.message.reply_text(
+                text="<b>🥳 ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴꜱ\n\n🎉 ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ꜰʀᴇᴇ ᴛʀᴀɪʟ ꜰᴏʀ <u>5 ᴍɪɴᴜᴛᴇs</u> ꜰʀᴏᴍ ɴᴏᴡ !</b>",
+                quote=False,
+                disable_web_page_preview=True,                  
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💸 ᴄʜᴇᴄᴋᴏᴜᴛ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴꜱ 💸", callback_data='seeplans')]]))
+            return    
+
+    elif query.data == "premium_info":
+        buttons = [[
+            InlineKeyboardButton('• ꜰʀᴇᴇ ᴛʀɪᴀʟ •', callback_data='free')
+        ],[
+            InlineKeyboardButton('❁ 𝗠𝗔𝗦𝗧𝗘𝗥 ❁', callback_data='master')
+        ],[
+            InlineKeyboardButton('❁ 𝗨𝗟𝗧𝗥𝗔 ❁', callback_data='ultra')
+        ],[            
+            InlineKeyboardButton('❁ 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ❁', callback_data='premium')
+        ],[            
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
+        ]]
+
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.PLAN_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "free":
+        buttons = [[
+            InlineKeyboardButton('⚜️ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ꜰʀᴇᴇ ᴛʀɪᴀʟ', callback_data="give_trial")
+        ],[
+            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='premium_info'),
+            InlineKeyboardButton('1 / 4', callback_data='pagesn1'),
+            InlineKeyboardButton('ɴᴇxᴛ ⋟', callback_data='master')
+        ],[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='premium_info')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.FREE_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    elif query.data == "master":
+        buttons = [[
+            InlineKeyboardButton('🔐 ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ʙᴜʏ ᴍᴀsᴛᴇʀ ᴘʟᴀɴ', callback_data='purchase')
+        ],[
+            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='free'),
+            InlineKeyboardButton('2 / 4', callback_data='pagesn1'),
+            InlineKeyboardButton('ɴᴇxᴛ ⋟', callback_data='ultra')
+        ],[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='premium_info')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.MASTER_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    elif query.data == "ultra":
+        buttons = [[
+            InlineKeyboardButton('🔐 ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ʙᴜʏ ᴜʟᴛʀᴀ ᴘʟᴀɴ', callback_data='purchase')
+        ],[
+            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='master'),
+            InlineKeyboardButton('3 / 4', callback_data='pagesn1'),
+            InlineKeyboardButton('ɴᴇxᴛ ⋟', callback_data='premium')
+        ],[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='premium_info')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.ULTRA_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    elif query.data == "premium":
+        buttons = [[
+            InlineKeyboardButton('🔐 ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ', callback_data='purchase')
+        ],[
+            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='ultra'),
+            InlineKeyboardButton('4 / 4', callback_data='pagesn1'),
+            InlineKeyboardButton('ɴᴇxᴛ ⋟', callback_data='premium_info')
+        ],[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='premium_info')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.PREMIUMPRO_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
     elif query.data == "help":
         buttons = [[
              InlineKeyboardButton('⚙️ Aᴅᴍɪɴ Oɴʟʏ 🔧', callback_data='admin'),
@@ -1482,15 +1653,23 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS))
         )
         reply_markup = InlineKeyboardMarkup(buttons)
-        total = await Media.count_documents()
+        #primary db
+        totalp = await Media.count_documents()
+        #secondary db
+        totalsec = await Media2.count_documents()
+        #users and chats
         users = await db.total_users_count()
         chats = await db.total_chat_count()
-        monsize = await db.get_db_size()
-        free = 536870912 - monsize
-        monsize = get_size(monsize)
-        free = get_size(free)
+        #primary db
+        stats = await clientDB.command('dbStats')
+        used_dbSize = (stats['dataSize']/(1024*1024))+(stats['indexSize']/(1024*1024))
+        free_dbSize = 512-used_dbSize
+        #secondary db
+        stats2 = await clientDB2.command('dbStats')
+        used_dbSize2 = (stats2['dataSize']/(1024*1024))+(stats2['indexSize']/(1024*1024))
+        free_dbSize2 = 512-used_dbSize2
         await query.message.edit_text(
-            text=script.STATUS_TXT.format(total, users, chats, monsize, free),
+            text=script.STATUS_TXT.format((int(totalp)+int(totalsec)), users, chats, totalp, round(used_dbSize, 2), round(free_dbSize, 2), totalsec, round(used_dbSize2, 2), round(free_dbSize2, 2)),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -1506,15 +1685,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS))
         )
         reply_markup = InlineKeyboardMarkup(buttons)
-        total = await Media.count_documents()
+        #primary db
+        totalp = await Media.count_documents()
+        #secondary db
+        totalsec = await Media2.count_documents()
         users = await db.total_users_count()
         chats = await db.total_chat_count()
-        monsize = await db.get_db_size()
-        free = 536870912 - monsize
-        monsize = get_size(monsize)
-        free = get_size(free)
+        #primary db
+        stats = await clientDB.command('dbStats')
+        used_dbSize = (stats['dataSize']/(1024*1024))+(stats['indexSize']/(1024*1024))
+        free_dbSize = 512-used_dbSize
+        #secondary db
+        stats2 = await clientDB2.command('dbStats')
+        used_dbSize2 = (stats2['dataSize']/(1024*1024))+(stats2['indexSize']/(1024*1024))
+        free_dbSize2 = 512-used_dbSize2
         await query.message.edit_text(
-            text=script.STATUS_TXT.format(total, users, chats, monsize, free),
+            text=script.STATUS_TXT.format((int(totalp)+int(totalsec)), users, chats, totalp, round(used_dbSize, 2), round(free_dbSize, 2), totalsec, round(used_dbSize2, 2), round(free_dbSize2, 2)),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -1668,7 +1854,7 @@ async def auto_filter(client, msg, spoll=False):
             search = search.lower()
             find = search.split(" ")
             search = ""
-            removes = ["in","upload", "series", "full", "horror", "thriller", "mystery", "print", "file"]
+            removes = ["in","upload", "series", "full", "horror", "thriller", "mystery", "print", "file", "movie"]
             for x in find:
                 if x in removes:
                     continue
@@ -1895,7 +2081,7 @@ async def advantage_spell_chok(client, msg):
                 caption=script.I_CUDNT.format(mv_rqst),
                 reply_markup=InlineKeyboardMarkup(button)
             )
-            await asyncio.sleep(10)
+            await asyncio.sleep(30)
             await k.delete()
             return
         regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
@@ -1933,7 +2119,7 @@ async def advantage_spell_chok(client, msg):
                 caption=script.I_CUDNT.format(mv_rqst),
                 reply_markup=InlineKeyboardMarkup(button)
             )
-            await asyncio.sleep(10)
+            await asyncio.sleep(30)
             await k.delete()
             return
         SPELL_CHECK[mv_id] = movielist
@@ -1951,14 +2137,14 @@ async def advantage_spell_chok(client, msg):
         )
         try:
             if settings['auto_delete']:
-                await asyncio.sleep(60)
+                await asyncio.sleep(30)
                 await spell_check_del.delete()
         except KeyError:
                 grpid = await active_connection(str(message.from_user.id))
                 await save_group_settings(grpid, 'auto_delete', True)
                 settings = await get_settings(message.chat.id)
                 if settings['auto_delete']:
-                    await asyncio.sleep(10)
+                    await asyncio.sleep(30)
                     await spell_check_del.delete()
     except:
         try:
@@ -1976,7 +2162,7 @@ async def advantage_spell_chok(client, msg):
                 caption=script.I_CUDNT.format(mv_rqst),
                 reply_markup=InlineKeyboardMarkup(button)
             )
-            await asyncio.sleep(10)
+            await asyncio.sleep(30)
             await k.delete()
             return
         movielist = []
@@ -1992,7 +2178,7 @@ async def advantage_spell_chok(client, msg):
                 caption=script.I_CUDNT.format(mv_rqst),
                 reply_markup=InlineKeyboardMarkup(button)
             )
-            await asyncio.sleep(10)
+            await asyncio.sleep(30)
             await k.delete()
             return
         movielist += [movie.get('title') for movie in movies]
@@ -2015,14 +2201,14 @@ async def advantage_spell_chok(client, msg):
         )
         try:
             if settings['auto_delete']:
-                await asyncio.sleep(300)
+                await asyncio.sleep(30)
                 await spell_check_del.delete()
         except KeyError:
                 grpid = await active_connection(str(msg.from_user.id))
                 await save_group_settings(grpid, 'auto_delete', True)
                 settings = await get_settings(msg.chat.id)
                 if settings['auto_delete']:
-                    await asyncio.sleep(300)
+                    await asyncio.sleep(30)
                     await spell_check_del.delete()
 
 
