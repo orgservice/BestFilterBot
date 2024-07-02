@@ -30,8 +30,8 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
     SOURCE_TXT = """<b>○ NOTE:</b>
 Special Thanks to ⚡ @ORGPrime ⚡
 
-<b>○ DEV:</b>
-‣ <a href=https://t.me/orgsupport>『 @ORGSupport 』</a>"""
+<blockquote><b>○ DEV:</b>
+‣ <a href=https://t.me/orgsupport>『 @ORGSupport 』</a></blockquote>"""
 
     MANUELFILTER_TXT = """ʜᴇʟᴘ: <b>ꜰɪʟᴛᴇʀꜱ</b>
 - ꜰɪʟᴛᴇʀ ɪꜱ ᴀ ꜰᴇᴀᴛᴜʀᴇ ᴡᴇʀᴇ ᴜꜱᴇʀꜱ ᴄᴀɴ ꜱᴇᴛ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ʀᴇᴘʟɪᴇꜱ ꜰᴏʀ ᴀ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴋᴇʏᴡᴏʀᴅ ᴀɴᴅ ɪ ᴡɪʟʟ ʀᴇꜱᴘᴏɴᴅ ᴡʜᴇɴᴇᴠᴇʀ ᴀ ᴋᴇʏᴡᴏʀᴅ ɪꜱ ꜰᴏᴜɴᴅ ɪɴ ᴛʜᴇ ᴍᴇꜱꜱᴀɢᴇ.
@@ -126,12 +126,23 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 • /delallg - <code>Tᴏ ᴅᴇʟᴇᴛᴇ ᴀʟʟ Gғɪʟᴛᴇʀs ғʀᴏᴍ ᴛʜᴇ ʙᴏᴛ's ᴅᴀᴛᴀʙᴀsᴇ.</code>
 • /deletefiles - <code>Tᴏ ᴅᴇʟᴇᴛᴇ CᴀᴍRɪᴘ ᴀɴᴅ PʀᴇDVD Fɪʟᴇs ғʀᴏᴍ ᴛʜᴇ ʙᴏᴛ's ᴅᴀᴛᴀʙᴀsᴇ.</code>"""
 
-    STATUS_TXT = """<b>★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
-★ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
-★ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>
-★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{}</code>
-★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code></b>"""
+    STATUS_TXT = """<b>📂 Tᴏᴛᴀʟ Fɪʟᴇs : <code>{}</code>
 
+★ Usᴇʀs & Cʜᴀᴛs Sᴛᴀᴛs
+╭ ▸ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
+╰ ▸ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>
+
+🗃 Dᴀᴛᴀʙᴀsᴇ 1️⃣ 
+╭ ▸ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
+├ ▸ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
+╰ ▸ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
+
+🗃 Dᴀᴛᴀʙᴀsᴇ 2️⃣
+╭ ▸ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
+├ ▸ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
+╰ ▸ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
+</b>"""
+    
     LOG_TEXT_G = """#NewGroup
 Gʀᴏᴜᴘ = {}(<code>{}</code>)
 Tᴏᴛᴀʟ Mᴇᴍʙᴇʀs = <code>{}</code>
@@ -151,41 +162,164 @@ Request Again."""
 
     CUDNT_FND = """<b>Sᴘᴇʟʟɪɴɢ Mɪꜱᴛᴀᴋᴇ Bʀᴏ ‼️\nᴅᴏɴ'ᴛ ᴡᴏʀʀʏ 😊 Cʜᴏᴏꜱᴇ ᴛʜᴇ ᴄᴏʀʀᴇᴄᴛ ᴏɴᴇ ʙᴇʟᴏᴡ 👇</b>"""
 
-    I_CUDNT = """<b>sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛ {} 😕
+    I_CUDNT = """
+<b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
-ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ 😃
+<u>✓ Recommendations just for you.
+✓ Watch Unlimited as You Want?
+✓ Enjoy Movies/Series/TVShows.
+✓ Also Enjoy P🔞RN Content 😋
+✓ Watch in 480p »to» (4K) Quality.
+✓ Request Group 💬 Available 🤩
+✓ Many More Extra Features 🌟</u>
 
-ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ 👇
+╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
+│
+│  🎁 Special Offers 【 90% ᥆ff 😍】
+│
+╰▸ [𝗠𝗔𝗦𝗧𝗘𝗥](t.me/ORGPrime/11) -   ₹100/-  ( 1 Year 😱)
+│
+╰▸ [𝗨𝗟𝗧𝗥𝗔](t.me/ORGPrime/14) -       ₹149/- (03 Month's)
+│
+╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
 
-ᴇxᴀᴍᴘʟᴇ : Salaar or Salaar 2023 or Salaar 2023 Hindi 
+ <i>👉 Buy Plan's & #Get 6 Channel's</i>
 
-ꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ 👇
+╰────────────────────╯
 
-ᴇxᴀᴍᴘʟᴇ : Loki S01 or Loki S01E01 or Lucifer S03E24
+╭──── 🔅 𝗕𝗘𝗡𝗘𝗙𝗜𝗧𝗦 🔅 ────╮
+│
+╰▸𝗠𝗔𝗦𝗧𝗘𝗥  ➧  T.me/ORGPrime/11
+│
+╰▸𝗨𝗟𝗧𝗥𝗔  ➧      T.me/ORGPrime/14
+│
+╰▸𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ➧ T.me/ORGPrime/17
 
-🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)</b>"""
 
-    I_CUD_NT = """<b>ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ {}.
+╭───🔅👇𝗣𝗔𝗬 𝗛𝗘𝗥𝗘👇🔅───╮
+                     
+      ᴜᴘɪ ɪᴅ ➢ <code>uhdpay@okaxis</code>
 
-ᴍᴏᴠɪᴇ ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ʀᴇᴀsᴏɴ :
+      Phone Pe :    7860806886
+      Google Pαγ : 7860806886
+      Pɑƴʈm :          7860806886
 
-1) ᴏ.ᴛ.ᴛ ᴏʀ ᴅᴠᴅ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ
+   📧 Sᴇɴᴅ Pᴀʏᴍᴇɴᴛ Sᴄʀᴇᴇɴsʜᴏᴛ
+   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
+   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
 
-2) ᴛʏᴘᴇ ɴᴀᴍᴇ ᴡɪᴛʜ ʏᴇᴀʀ
+╰────────────────────╯
 
-3) Sᴘᴇʟʟɪɴɢ Mɪꜱᴛᴀᴋᴇ</b>"""
+⚠️ For Any Enquiry
+➢ @ORGPrimebot
 
-    MVE_NT_FND = """<b>ᴍᴏᴠɪᴇ ɴᴏᴛ ꜰᴏᴜɴᴅ ɪɴ ᴅᴀᴛᴀʙᴀꜱᴇ...
+📌 @ORGPrime</b>"""
 
-ʀᴇᴀsᴏɴ :-
-1) ᴏ.ᴛ.ᴛ ᴏʀ ᴅᴠᴅ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ
-2) ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʏᴇᴛ
-3) Sᴘᴇʟʟɪɴɢ Mɪꜱᴛᴀᴋᴇ
+    I_CUD_NT = """
+<b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
-ᴘʟᴇᴀꜱᴇ reqυeѕт iɴ тнiѕ ɢroυp wiтн ғorмαт. мy мoderαтorѕ will υploαd iт ѕooɴ.
-    
-✅ ᴄʜᴇᴄᴋ ғᴏʀᴍᴀᴛ 👇
-https://t.me/c/2127187291/15</b>"""
+<u>✓ Recommendations just for you.
+✓ Watch Unlimited as You Want?
+✓ Enjoy Movies/Series/TVShows.
+✓ Also Enjoy P🔞RN Content 😋
+✓ Watch in 480p »to» (4K) Quality.
+✓ Request Group 💬 Available 🤩
+✓ Many More Extra Features 🌟</u>
+
+╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
+│
+│  🎁 Special Offers 【 90% ᥆ff 😍】
+│
+╰▸ [𝗠𝗔𝗦𝗧𝗘𝗥](t.me/ORGPrime/11) -   ₹100/-  ( 1 Year 😱)
+│
+╰▸ [𝗨𝗟𝗧𝗥𝗔](t.me/ORGPrime/14) -       ₹149/- (03 Month's)
+│
+╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
+
+ <i>👉 Buy Plan's & #Get 6 Channel's</i>
+
+╰────────────────────╯
+
+╭──── 🔅 𝗕𝗘𝗡𝗘𝗙𝗜𝗧𝗦 🔅 ────╮
+│
+╰▸𝗠𝗔𝗦𝗧𝗘𝗥  ➧  T.me/ORGPrime/11
+│
+╰▸𝗨𝗟𝗧𝗥𝗔  ➧      T.me/ORGPrime/14
+│
+╰▸𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ➧ T.me/ORGPrime/17
+
+
+╭───🔅👇𝗣𝗔𝗬 𝗛𝗘𝗥𝗘👇🔅───╮
+                     
+      ᴜᴘɪ ɪᴅ ➢ <code>uhdpay@okaxis</code>
+
+      Phone Pe :    7860806886
+      Google Pαγ : 7860806886
+      Pɑƴʈm :          7860806886
+
+   📧 Sᴇɴᴅ Pᴀʏᴍᴇɴᴛ Sᴄʀᴇᴇɴsʜᴏᴛ
+   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
+   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
+
+╰────────────────────╯
+
+⚠️ For Any Enquiry
+➢ @ORGPrimebot
+
+📌 @ORGPrime</b>"""
+
+    MVE_NT_FND = """
+<b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
+
+<u>✓ Recommendations just for you.
+✓ Watch Unlimited as You Want?
+✓ Enjoy Movies/Series/TVShows.
+✓ Also Enjoy P🔞RN Content 😋
+✓ Watch in 480p »to» (4K) Quality.
+✓ Request Group 💬 Available 🤩
+✓ Many More Extra Features 🌟</u>
+
+╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
+│
+│  🎁 Special Offers 【 90% ᥆ff 😍】
+│
+╰▸ [𝗠𝗔𝗦𝗧𝗘𝗥](t.me/ORGPrime/11) -   ₹100/-  ( 1 Year 😱)
+│
+╰▸ [𝗨𝗟𝗧𝗥𝗔](t.me/ORGPrime/14) -       ₹149/- (03 Month's)
+│
+╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
+
+ <i>👉 Buy Plan's & #Get 6 Channel's</i>
+
+╰────────────────────╯
+
+╭──── 🔅 𝗕𝗘𝗡𝗘𝗙𝗜𝗧𝗦 🔅 ────╮
+│
+╰▸𝗠𝗔𝗦𝗧𝗘𝗥  ➧  T.me/ORGPrime/11
+│
+╰▸𝗨𝗟𝗧𝗥𝗔  ➧      T.me/ORGPrime/14
+│
+╰▸𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ➧ T.me/ORGPrime/17
+
+
+╭───🔅👇𝗣𝗔𝗬 𝗛𝗘𝗥𝗘👇🔅───╮
+                     
+      ᴜᴘɪ ɪᴅ ➢ <code>uhdpay@okaxis</code>
+
+      Phone Pe :    7860806886
+      Google Pαγ : 7860806886
+      Pɑƴʈm :          7860806886
+
+   📧 Sᴇɴᴅ Pᴀʏᴍᴇɴᴛ Sᴄʀᴇᴇɴsʜᴏᴛ
+   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
+   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
+
+╰────────────────────╯
+
+⚠️ For Any Enquiry
+➢ @ORGPrimebot
+
+📌 @ORGPrime</b>"""
 
     TOP_ALRT_MSG = """Cʜᴇᴄᴋɪɴɢ Fᴏʀ Mᴏᴠɪᴇ Iɴ Dᴀᴛᴀʙᴀsᴇ..."""
 
@@ -219,7 +353,7 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
-    CAPTION = """<b>[ @ORGPrime ] -</b> <code>{file_name}</code> \n\n#𝙊𝙍𝙂𝙋𝙧𝙞𝙢𝙚 – #𝙉𝙤𝟏 𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝙋𝙧𝙚𝙢𝙞𝙪𝙢 𝙈𝙤𝙫𝙞𝙚𝙨 𝘼𝙣𝙙 𝙒𝙚𝙗 𝙎𝙚𝙧𝙞𝙚𝙨 𝙀𝙣𝙩𝙚𝙧𝙩𝙖𝙞𝙣𝙢𝙚𝙣𝙩 𝘾𝙝𝙖𝙣𝙣𝙚𝙡.\n\n <b><i>⏤͟͞𝗝⌡𝗼𝗶𝗻 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 </b></i>– <b>「 @ORGPrime 」</b>""" 
+    CAPTION = """<b>[ @ORGPrime ] -</b> <code>{file_name}</code> \n\n<blockquote>#𝙊𝙍𝙂𝙋𝙧𝙞𝙢𝙚 – #𝙉𝙤𝟏 𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝙋𝙧𝙚𝙢𝙞𝙪𝙢 𝙈𝙤𝙫𝙞𝙚𝙨 𝘼𝙣𝙙 𝙒𝙚𝙗 𝙎𝙚𝙧𝙞𝙚𝙨 𝙀𝙣𝙩𝙚𝙧𝙩𝙖𝙞𝙣𝙢𝙚𝙣𝙩 𝘾𝙝𝙖𝙣𝙣𝙚𝙡.</blockquote>\n\n <b><i>⏤͟͞𝗝⌡𝗼𝗶𝗻 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 </b></i>– <b>「 @ORGPrime 」</b>""" 
 
     IMDB_TEMPLATE_TXT = """
 🏷 𝖳𝗂𝗍𝗅𝖾: <a href={url}>{title}</a> 
@@ -227,7 +361,7 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 ⭐️ 𝖱𝖺𝗍𝗂𝗇𝗀𝗌: {rating}/ 10  
 🎭 𝖦𝖾𝗇𝖾𝗋𝗌: {genres} 
 
-<b>🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒</b> 「 [@ORGPrime](t.me/orgprime) 」"""
+<blockquote><b>🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒</b> 「 [@ORGPrime](t.me/orgprime) 」</blockquote>"""
     
     ALL_FILTERS = """Hᴇʟᴘ: <b>All Fɪʟᴛᴇʀs</b>
 
@@ -284,7 +418,7 @@ Step 1: Administer this BOT to Your Group
 
 Step 2: Add Your Website and API
 
-Example: /shortlink omegalinks.in 4b392f8eb6ad711fbe58
+Example: /shortlink gplinks.com 05f37d34abed37ae8993d82a8f98af17d7ec2376
 
 :) Add a Tutorial video (:
 
@@ -319,9 +453,360 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
 
 साथ ही आपका वीडियो आपके ग्रुप में ऐड हो जाएगा।...</b>"""
 
+    #PLANS
+
+    PAGE_TXT = """Wʜʏ ᴀʀᴇ ʏᴏᴜ ꜱᴏ ᴄᴜʀɪᴏᴜꜱ ⁉️"""
+
+    PURCHASE_TXT = """✅ Sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴘᴀʏᴍᴇɴᴛ ᴍᴇᴛʜᴏᴅ ✅"""
+
+    PREMIUM_TEXT = """
+<b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
+
+<u>✓ Recommendations just for you.
+✓ Watch Unlimited as You Want?
+✓ Enjoy Movies/Series/TVShows.
+✓ Also Enjoy P🔞RN Content 😋
+✓ Watch in 480p »to» (4K) Quality.
+✓ Request Group 💬 Available 🤩
+✓ Many More Extra Features 🌟</u>
+
+╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
+│
+│  🎁 Special Offers 【 90% ᥆ff 😍】
+│
+╰▸ [𝗠𝗔𝗦𝗧𝗘𝗥](t.me/ORGPrime/11) -   ₹100/-  ( 1 Year 😱)
+│
+╰▸ [𝗨𝗟𝗧𝗥𝗔](t.me/ORGPrime/14) -       ₹149/- (03 Month's)
+│
+╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
+
+ <i>👉 Buy Plan's & #Get 6 Channel's</i>
+
+╰────────────────────╯
+
+╭──── 🔅 𝗕𝗘𝗡𝗘𝗙𝗜𝗧𝗦 🔅 ────╮
+│
+╰▸𝗠𝗔𝗦𝗧𝗘𝗥  ➧  T.me/ORGPrime/11
+│
+╰▸𝗨𝗟𝗧𝗥𝗔  ➧      T.me/ORGPrime/14
+│
+╰▸𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ➧ T.me/ORGPrime/17
+
+
+╭───🔅👇𝗣𝗔𝗬 𝗛𝗘𝗥𝗘👇🔅───╮
+                     
+      ᴜᴘɪ ɪᴅ ➢ <code>uhdpay@okaxis</code>
+
+      Phone Pe :    7860806886
+      Google Pαγ : 7860806886
+      Pɑƴʈm :          7860806886
+
+   📧 Sᴇɴᴅ Pᴀʏᴍᴇɴᴛ Sᴄʀᴇᴇɴsʜᴏᴛ
+   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
+   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
+
+╰────────────────────╯
+
+⚠️ For Any Enquiry
+➢ @ORGPrimebot
+
+📌 @ORGPrime</b>"""
+
+    CPREMIUM_TEXT = """
+<b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
+
+<u>✓ Recommendations just for you.
+✓ Watch Unlimited as You Want?
+✓ Enjoy Movies/Series/TVShows.
+✓ Also Enjoy P🔞RN Content 😋
+✓ Watch in 480p »to» (4K) Quality.
+✓ Request Group 💬 Available 🤩
+✓ Many More Extra Features 🌟</u>
+
+╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
+│
+│  🎁 Special Offers 【 90% ᥆ff 😍】
+│
+╰▸ [𝗠𝗔𝗦𝗧𝗘𝗥](t.me/ORGPrime/11) -   ₹100/-  ( 1 Year 😱)
+│
+╰▸ [𝗨𝗟𝗧𝗥𝗔](t.me/ORGPrime/14) -       ₹149/- (03 Month's)
+│
+╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
+
+ <i>👉 Buy Plan's & #Get 6 Channel's</i>
+
+╰────────────────────╯
+
+╭──── 🔅 𝗕𝗘𝗡𝗘𝗙𝗜𝗧𝗦 🔅 ────╮
+│
+╰▸𝗠𝗔𝗦𝗧𝗘𝗥  ➧  T.me/ORGPrime/11
+│
+╰▸𝗨𝗟𝗧𝗥𝗔  ➧      T.me/ORGPrime/14
+│
+╰▸𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ➧ T.me/ORGPrime/17
+
+
+╭───🔅👇𝗣𝗔𝗬 𝗛𝗘𝗥𝗘👇🔅───╮
+                     
+      ᴜᴘɪ ɪᴅ ➢ <code>uhdpay@okaxis</code>
+
+      Phone Pe :    7860806886
+      Google Pαγ : 7860806886
+      Pɑƴʈm :          7860806886
+
+   📧 Sᴇɴᴅ Pᴀʏᴍᴇɴᴛ Sᴄʀᴇᴇɴsʜᴏᴛ
+   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
+   ⚡ Aᴅᴍɪɴ👉 [@ORGSupport](t.me/ORGSupport) ✅️
+
+╰────────────────────╯
+
+⚠️ For Any Enquiry
+➢ @ORGPrimebot
+
+📌 @ORGPrime</b>"""
+
+    PLAN_TXT = """<b>👋 ʜᴇʏ ᴛʜᴇʀᴇ,
+    
+🎁 <u>ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs</u> :
+
+○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
+○ ᴇɴᴊᴏʏ ᴅᴀɪʟʏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs/ᴛᴠsʜᴏᴡs.
+○ ᴇɴᴊᴏʏ ᴘᴏʀɴ 🔞 ﹠ ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟs
+○ ᴡᴀᴛᴄʜ ɪɴ 𝟺𝟾𝟶ᴘ »ᴛᴏ»﹙𝟺ᴋ﹚ʜᴅʀ ϙᴜᴀʟɪᴛʏ.
+○ ᴇɴᴊᴏʏ ᴅɪʀᴇᴄᴛ ғɪʟᴇs ᴏɴ ᴄʜᴀɴɴᴇʟ
+○ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ﹠ ɢᴇᴛ 𝟽 ᴄʜᴀɴɴᴇʟ's.
+○ ʀᴇϙᴜᴇsᴛ ɢʀᴏᴜᴘ 💬 ᴀᴠᴀɪʟᴀʙʟᴇ 🔥
+○ ʀᴇǫᴜᴇsᴛ ᴡɪʟʟ ʙᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ɪɴ 1ʜ [ ɪꜰ ᴀᴠᴀɪʟᴀʙʟᴇ ]
+○ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ᴀᴅ's ʟɪɴᴋꜱ
+○ ᴇɴᴊᴏʏ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ 
+○ ʜɪɢʜ-sᴘᴇᴇᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ             
+○ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs                        
+○ ꜰᴜʟʟ ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ 💬
+○ ɴᴏ ᴇxᴛʀᴀ ғᴇᴇs. ʙᴜᴛ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs 🎉
+○ 𝟷𝟶𝟶% ᴛʀᴜsᴛᴇᴅ ᴄʜᴀɴɴᴇʟ.
+✓  ᴍᴀɴʏ ᴍᴏʀᴇ....
+
+➛ ᴜꜱᴇ /plan ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴏᴜʀ ᴘʟᴀɴꜱ ᴀᴛ ᴏɴᴄᴇ.
+➛ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ ʙʏ ᴜꜱɪɴɢ : /myplan
+
+‼️ ᴀғᴛᴇʀ sᴇɴᴅɪɴɢ ᴀ sᴄʀᴇᴇɴsʜᴏᴛ ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴜs sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ.</b>"""
+
+    FREE_TXT = """<b>👋 ʜᴇʏ ᴛʜᴇʀᴇ,
+    
+🎉 <u>ꜰʀᴇᴇ ᴛʀɪᴀʟ</u> 🎉
+
+❗ ᴏɴʟʏ ꜰᴏʀ 5 ᴍɪɴᴜᴛᴇꜱ
+ 
+○ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋꜱ
+○ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs
+○ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ
+
+➛ ᴜꜱᴇ /plan ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴏᴜʀ ᴘʟᴀɴꜱ ᴀᴛ ᴏɴᴄᴇ.
+➛ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ ʙʏ ᴜꜱɪɴɢ : /myplan</b>"""
+
+    MASTER_TXT = """
+<b>💎 𝗠𝗔𝗦𝗧𝗘𝗥 𝗣𝗟𝗔𝗡
+
+📊 ORG Primᥱ Mᥱmbᥱrshiρ 🎉
+
+[ Only Rs ₹100 for 01 Year's 😱 ]
+
+────────────────────────
+🎯 Oᥙr Pᥣᥲᥒ Sᥱrviᥴᥱ & Benefits 🎉
+👉 https://t.me/ORGPrime/11
+────────────────────────
+
+❏ Buy & Get Total 5 Channels 😱😱
+ │
+ ├ [1] Master Group 🎬
+ ├ [2] Movies Premium 🎬
+ ├ [3] WebSeries Premium 🎬
+ ├ [4] TV Shows Premium 🎬
+ └ [5] Adult 🔞 Premium 🎬
+
+────────────────────────
+
+🎁 <u>ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs</u> :
+○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
+○ ᴇɴᴊᴏʏ ᴅᴀɪʟʏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs/ᴛᴠsʜᴏᴡs.
+○ ᴇɴᴊᴏʏ 🔞 ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟs
+○ ᴡᴀᴛᴄʜ ɪɴ 𝟺𝟾𝟶ᴘ ᴛᴏ﹙𝟷𝟶𝟾𝟶ᴘ﹚ϙᴜᴀʟɪᴛʏ.
+○ ᴇɴᴊᴏʏ ᴅɪʀᴇᴄᴛ ғɪʟᴇs ᴏɴ ᴄʜᴀɴɴᴇʟ
+○ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ﹠ ɢᴇᴛ 𝟻 ᴄʜᴀɴɴᴇʟ's.
+○ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ᴀᴅ's ʟɪɴᴋꜱ
+○ ᴇɴᴊᴏʏ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ 
+○ ʜɪɢʜ-sᴘᴇᴇᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ             
+○ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs                        
+○ ɴᴏ ᴇxᴛʀᴀ ғᴇᴇs. ʙᴜᴛ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs 🎉
+✓  ᴍᴀɴʏ ᴍᴏʀᴇ....
+
+📌 @ORGPrime</b>"""
+
+    ULTRA_TXT = """
+<b>💎 𝗨𝗟𝗧𝗥𝗔 𝗣𝗟𝗔𝗡
+
+📊 ORG Primᥱ Mᥱmbᥱrshiρ 🎉
+
+[ Only Rs ₹149 for 03 Month's 💥 ]
+
+────────────────────────
+🎯 Oᥙr Pᥣᥲᥒ Sᥱrviᥴᥱ & Benefits 🎉
+👉 https://t.me/ORGPrime/14
+────────────────────────
+
+❏ Buy & Get Total 06 Channel's 😱😱
+ │
+ ├ [1] ULTRA [MOVIES 4K] ALL 🎬
+ ├ [2] ULTRA [REQUEST] Group 🎬
+ ├ [3] ULTRA [WEB SERIES] 🎬
+ ├ [4] ULTRA [TV SHOWS] 🎬
+ ├ [5] ULTRA [ADULT 🔞] Film 🎬
+ └ [6] ULTRA [NSFW] P🔞RN 🎬
+
+────────────────────────
+
+🎁 <u>ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs</u> :
+○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
+○ ᴇɴᴊᴏʏ ᴅᴀɪʟʏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs/ᴛᴠsʜᴏᴡs.
+○ ᴇɴᴊᴏʏ ᴘᴏʀɴ 🔞 ﹠ ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟs
+○ ᴡᴀᴛᴄʜ ɪɴ 𝟺𝟾𝟶ᴘ »ᴛᴏ»﹙𝟺ᴋ﹚ϙᴜᴀʟɪᴛʏ.
+○ ᴇɴᴊᴏʏ ᴅɪʀᴇᴄᴛ ғɪʟᴇs ᴏɴ ᴄʜᴀɴɴᴇʟ
+○ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ﹠ ɢᴇᴛ 𝟼 ᴄʜᴀɴɴᴇʟ's.
+○ ʀᴇϙᴜᴇsᴛ ɢʀᴏᴜᴘ 💬 ᴀᴠᴀɪʟᴀʙʟᴇ 🔥
+○ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ᴀᴅ's ʟɪɴᴋꜱ
+○ ᴇɴᴊᴏʏ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ
+○ ʜɪɢʜ-sᴘᴇᴇᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 
+○ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs
+○ ꜰᴜʟʟ 𝟸𝟺𝔵𝟽 ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ 💬
+○ ɴᴏ ᴇxᴛʀᴀ ғᴇᴇs. ʙᴜᴛ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs 🎉
+✓  ᴍᴀɴʏ ᴍᴏʀᴇ....
+
+📌 @ORGPrime</b>"""
+
+    PREMIUMPRO_TXT = """
+<b>💎 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 𝗣𝗟𝗔𝗡
+
+📊 ORG Primᥱ Mᥱmbᥱrshiρ 🎉
+
+[ Only Rs ₹299 for 06 Month's 😱 ]
+
+────────────────────────
+🎯 Oᥙr Pᥣᥲᥒ Sᥱrviᥴᥱ & Benefits 🎉
+👉 https://t.me/ORGPrime/17
+────────────────────────
+
+❏ Buy & Get Total 06 Channel's 😱😱
+ │
+ ├ [1] PREMIUM [MOVIES 4K] ALL 🎬
+ ├ [2] PREMIUM [REQUEST] Group 🎬
+ ├ [3] PREMIUM [WEB SERIES] 🎬
+ ├ [4] PREMIUM [TV SHOWS] 🎬
+ ├ [5] PREMIUM [ADULT 🔞] Film 🎬
+ └ [6] PREMIUM [NSFW] P🔞RN 🎬
+
+────────────────────────
+
+🎁 <u>ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs</u> :
+○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
+○ ᴇɴᴊᴏʏ ᴅᴀɪʟʏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs/ᴛᴠsʜᴏᴡs.
+○ ᴇɴᴊᴏʏ ᴘᴏʀɴ 🔞 ﹠ ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟs
+○ ᴡᴀᴛᴄʜ ɪɴ 𝟺𝟾𝟶ᴘ »ᴛᴏ»﹙𝟺ᴋ﹚ϙᴜᴀʟɪᴛʏ.
+○ ᴇɴᴊᴏʏ ᴅɪʀᴇᴄᴛ ғɪʟᴇs ᴏɴ ᴄʜᴀɴɴᴇʟ
+○ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ﹠ ɢᴇᴛ 𝟼 ᴄʜᴀɴɴᴇʟ's.
+○ ʀᴇϙᴜᴇsᴛ ɢʀᴏᴜᴘ 💬 ᴀᴠᴀɪʟᴀʙʟᴇ 🔥
+○ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ᴀᴅ's ʟɪɴᴋꜱ
+○ ᴇɴᴊᴏʏ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ
+○ ʜɪɢʜ-sᴘᴇᴇᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 
+○ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs
+○ ꜰᴜʟʟ 𝟸𝟺𝔵𝟽 ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ 💬
+○ ɴᴏ ᴇxᴛʀᴀ ғᴇᴇs. ʙᴜᴛ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs 🎉
+✓  ᴍᴀɴʏ ᴍᴏʀᴇ....
+
+📌 @ORGPrime</b>"""
+
+
+    UPI_TXT = """<b>👋 ʜᴇʏ ᴛʜᴇʀᴇ,
+    
+⚜️ ᴘᴀʏ ᴀᴍᴏᴜɴᴛ ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ʏᴏᴜʀ ᴘʟᴀɴ ᴀɴᴅ ᴇɴᴊᴏʏ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀꜱʜɪᴘ !
+
+📝 𝗣𝗔𝗬𝗠𝗘𝗡𝗧 𝗢𝗣𝗧𝗜𝗢𝗡𝗦 
+
+
+╭─────🔅👇 PAY HERE 👇 🔅─────╮
+                     
+      UPI ID 👉  <code>uhdpay@okaxis</code>  (Copy)
+
+      Phoηe Pe :    7860806886
+      Google Pαγ : 7860806886 
+      Pɑƴʈm :          7860806886
+
+╰────────────────────────╯
+
+<i>For Any Enquiry</i>
+<i>Checkout  : @ORGPrimebot</i>
+
+‼️ ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ.</b>"""
+
+    QR_TXT = """<b>👋 ʜᴇʏ ᴛʜᴇʀᴇ,
+    
+⚜️ ᴘᴀʏ ᴀᴍᴏᴜɴᴛ ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ʏᴏᴜʀ ᴘʟᴀɴ ᴀɴᴅ ᴇɴᴊᴏʏ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀꜱʜɪᴘ !
+
+📸 QR CODE - <a href='https://graph.org/Payment-Information-03-31'>👉 ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ꜱᴄᴀɴ 👈</a>
+
+‼️ ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ.</b>"""
+
+    PREPLANS_TXT = """<b>👋 ʜᴇʏ ᴛʜᴇʀᴇ,
+    
+<b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
+
+<u>✓ Recommendations just for you.
+✓ Watch Unlimited as You Want?
+✓ Enjoy Movies/Series/TVShows.
+✓ Multi-Player Streaming Available.
+✓ Watch 480p »to» (1080p) Quality.
+✓ Many More Extra Features 🌟</u>
+
+💎 𝗠𝗔𝗦𝗧𝗘𝗥 𝗣𝗟𝗔𝗡
+
+[ Only Rs ₹100 for 01 Year's 😱 ]
+
+────────────────────────
+🎯 Oᥙr Pᥣᥲᥒ Sᥱrviᥴᥱ & Benefits 🎉
+👉 https://t.me/ORGPrime/11
+────────────────────────
+
+❏ Buy & Get Total 5 Channels 😱😱
+ │
+ ├ [1] Master Group 🎬
+ ├ [2] Movies Premium 🎬
+ ├ [3] WebSeries Premium 🎬
+ ├ [4] TV Shows Premium 🎬
+ └ [5] Adult 🔞 Premium 🎬
+
+────────────────────────
+
+ <i>👉 Buy Plan's & #Get 5 Channel's</i>
+
+╭───🔅👇𝗣𝗔𝗬 𝗛𝗘𝗥𝗘👇🔅───╮
+                     
+      ᴜᴘɪ ɪᴅ ➢ <code>uhdpay@okaxis</code>
+
+      Phone Pe :    7860806886
+      Google Pαγ : 7860806886
+      Pɑƴʈm :          7860806886
+
+   📧 Sᴇɴᴅ Pᴀʏᴍᴇɴᴛ Sᴄʀᴇᴇɴsʜᴏᴛ
+   ⚡ Aᴅᴍɪɴ👉 @ORGSupport ✅️
+   ⚡ Aᴅᴍɪɴ👉 @ORGSupport ✅️
+
+╰────────────────────╯
+
+⚠️ For Any Enquiry
+➢ @ORGPrimebot
+
+📌 @ORGPrime</b>"""    
 
     DEVELOPER_TXT = """
 Special Thanks To ❤️ Developers """
-
 
 # End
