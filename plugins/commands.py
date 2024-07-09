@@ -255,19 +255,19 @@ async def start(client, message):
         if str(message.from_user.id) != str(userid):
             return await message.reply_text(
                 text="<b>Invalid link or Expired link !</b>",
-                protect_content=True
+                protect_content=False
             )
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
             await message.reply_text(
                 text=f"<b>ʜᴇʏ, ʏᴏᴜ'ʀᴇ ᴀʀᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴠᴇʀɪꜰɪᴇᴅ ✅\n\nɴᴏᴡ ʏᴏᴜ'ᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ᴛɪʟʟ ɴᴇxᴛ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ 🎉</b>",
-                protect_content=True
+                protect_content=False
             )
             await verify_user(client, userid, token)
         else:
             return await message.reply_text(
                 text="<b>Invalid link or Expired link !</b>",
-                protect_content=True
+                protect_content=False
             )
     if data.startswith("sendfiles"):
         chat_id = int("-" + file_id.split("-")[1])
@@ -339,7 +339,7 @@ async def start(client, message):
                 ]]
                 await message.reply_text(
                     text="<b>👋 ʜᴇʏ ᴛʜᴇʀᴇ,\n\n📌 <u>ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴠᴇʀɪꜰɪᴇᴅ ᴛᴏᴅᴀʏ, ᴘʟᴇᴀꜱᴇ ᴠᴇʀɪꜰʏ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ᴛɪʟʟ ɴᴇxᴛ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ.\n\n'✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨'</u></b>",
-                    protect_content=True,
+                    protect_content=False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
@@ -347,7 +347,7 @@ async def start(client, message):
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 caption=f_caption,
-                protect_content=True if pre == 'filep' else False,
+                protect_content=False if pre == 'filep' else False,
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -407,7 +407,7 @@ async def start(client, message):
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
-                protect_content=True if pre == 'filep' else False,
+                protect_content=False if pre == 'filep' else False,
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -468,7 +468,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        protect_content=True if pre == 'filep' else False,
+        protect_content=False if pre == 'filep' else False,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
