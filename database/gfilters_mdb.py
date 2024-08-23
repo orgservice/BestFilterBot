@@ -39,9 +39,8 @@ async def find_gfilter(gfilters, name):
     mycol2 = mydb2[str(gfilters)]
     
     query = mycol.find( {"text":name})
+    query2 = mycol2.find({"text": name})
     # query = mycol.find( { "$text": {"$search": name}})
-    if query.count() == 0:
-        query = mycol2.find({"text": name})
     try:
         for file in query:
             reply_text = file['reply']
@@ -53,7 +52,18 @@ async def find_gfilter(gfilters, name):
                 alert = None
         return reply_text, btn, alert, fileid
     except:
-        return None, None, None, None
+        try:
+            for file in query2:
+                reply_text = file['reply']
+                btn = file['btn']
+                fileid = file['file']
+                try:
+                    alert = file['alert']
+                except:
+                    alert = None
+            return reply_text, btn, alert, fileid
+        except:
+            return None, None, None, None
 
 
 async def get_gfilters(gfilters):
