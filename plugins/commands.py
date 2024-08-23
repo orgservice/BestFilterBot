@@ -854,7 +854,7 @@ async def plan(client, message):
     await message.reply_photo(photo="https://graph.org/file/54fde3e34103198dabaea.jpg", caption=script.PREMIUM_TEXT.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(btn))
 
 
-@Client.on_message((filters.command(["request", "Request", "Chat", "Done"]) | filters.regex("#request") | filters.regex("#Request") | filters.regex("#Chat") | filters.regex("#Done")) & filters.group)
+@Client.on_message((filters.command(["request", "Request"]) | filters.regex("#request") | filters.regex("#Request")) & filters.group)
 async def requests(bot, message):
     if REQST_CHANNEL is None or SUPPORT_CHAT_ID is None: return # Must add REQST_CHANNEL and SUPPORT_CHAT_ID to use this feature
     if message.reply_to_message and SUPPORT_CHAT_ID == message.chat.id:
@@ -894,7 +894,7 @@ async def requests(bot, message):
         mention = message.from_user.mention
         success = True
         content = message.text
-        keywords = ["#request", "/request", "#Request", "/Request", "#Chat", "/Chat", "#Done", "/Done"]
+        keywords = ["#request", "/request", "#Request", "/Request"]
         for keyword in keywords:
             if keyword in content:
                 content = content.replace(keyword, "")
