@@ -165,13 +165,13 @@ Request Again."""
     I_CUDNT = """
 <b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
-<u>✓ Recommendations just for you.
+<blockquote><u>✓ Recommendations just for you.
 ✓ Watch Unlimited as You Want?
 ✓ Enjoy Movies/Series/TVShows.
 ✓ Also Enjoy P🔞RN Content 😋
 ✓ Watch in 480p »to» (4K) Quality.
 ✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u>
+✓ Many More Extra Features 🌟</u></blockquote>
 
 ╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
 │
@@ -183,7 +183,7 @@ Request Again."""
 │
 ╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
 
- <i>👉 Buy Plan's & #Get 6 Channel's</i>
+ <i>👉 Buy Plan's & #Get 7 Channel's</i>
 
 ╰────────────────────╯
 
@@ -218,13 +218,13 @@ Request Again."""
     I_CUD_NT = """
 <b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
-<u>✓ Recommendations just for you.
+<blockquote><u>✓ Recommendations just for you.
 ✓ Watch Unlimited as You Want?
 ✓ Enjoy Movies/Series/TVShows.
 ✓ Also Enjoy P🔞RN Content 😋
 ✓ Watch in 480p »to» (4K) Quality.
 ✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u>
+✓ Many More Extra Features 🌟</u></blockquote>
 
 ╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
 │
@@ -236,7 +236,7 @@ Request Again."""
 │
 ╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
 
- <i>👉 Buy Plan's & #Get 6 Channel's</i>
+ <i>👉 Buy Plan's & #Get 7 Channel's</i>
 
 ╰────────────────────╯
 
@@ -271,13 +271,13 @@ Request Again."""
     MVE_NT_FND = """
 <b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
-<u>✓ Recommendations just for you.
+<blockquote><u>✓ Recommendations just for you.
 ✓ Watch Unlimited as You Want?
 ✓ Enjoy Movies/Series/TVShows.
 ✓ Also Enjoy P🔞RN Content 😋
 ✓ Watch in 480p »to» (4K) Quality.
 ✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u>
+✓ Many More Extra Features 🌟</u></blockquote>
 
 ╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
 │
@@ -289,7 +289,7 @@ Request Again."""
 │
 ╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
 
- <i>👉 Buy Plan's & #Get 6 Channel's</i>
+ <i>👉 Buy Plan's & #Get 7 Channel's</i>
 
 ╰────────────────────╯
 
@@ -461,13 +461,13 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
     PREMIUM_TEXT = """
 <b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
-<u>✓ Recommendations just for you.
+<blockquote><u>✓ Recommendations just for you.
 ✓ Watch Unlimited as You Want?
 ✓ Enjoy Movies/Series/TVShows.
 ✓ Also Enjoy P🔞RN Content 😋
 ✓ Watch in 480p »to» (4K) Quality.
 ✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u>
+✓ Many More Extra Features 🌟</u></blockquote>
 
 ╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
 │
@@ -479,7 +479,7 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
 │
 ╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
 
- <i>👉 Buy Plan's & #Get 6 Channel's</i>
+ <i>👉 Buy Plan's & #Get 7 Channel's</i>
 
 ╰────────────────────╯
 
@@ -514,13 +514,13 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
     CPREMIUM_TEXT = """
 <b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
-<u>✓ Recommendations just for you.
+<blockquote><u>✓ Recommendations just for you.
 ✓ Watch Unlimited as You Want?
 ✓ Enjoy Movies/Series/TVShows.
 ✓ Also Enjoy P🔞RN Content 😋
 ✓ Watch in 480p »to» (4K) Quality.
 ✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u>
+✓ Many More Extra Features 🌟</u></blockquote>
 
 ╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
 │
@@ -532,7 +532,7 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
 │
 ╰▸ [𝗣𝗥𝗘𝗠𝗜𝗨𝗠](t.me/ORGPrime/17) - ₹299/- (06 Month's)
 
- <i>👉 Buy Plan's & #Get 6 Channel's</i>
+ <i>👉 Buy Plan's & #Get 7 Channel's</i>
 
 ╰────────────────────╯
 
