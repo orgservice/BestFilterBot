@@ -64,10 +64,19 @@ async def give_filter(client, message):
     else: #a better logic to avoid repeated lines of code in auto_filter function
         search = message.text
         temp_files, temp_offset, total_results = await get_search_results(chat_id=message.chat.id, query=search.lower(), offset=0, filter=True)
+        button = [[
+                       InlineKeyboardButton("✅ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✅", url=f"https://t.me/ORGPrime/25")
+        ]]
         if total_results == 0:
             return
         else:
-            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention},\n\n<blockquote>Tᴏᴛᴀʟ <code>{str(total_results)} Rᴇsᴜʟᴛs</code> Aᴠᴀɪʟᴀʙʟᴇ.\nFᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ <code>{search}</code>.</blockquote>\n\nYᴏᴜ Wɪʟʟ Gᴇᴛ Fɪʟᴇs Fʀᴏᴍ Hᴇʀᴇ...\nSᴇᴀʀᴄʜ 🔍 Hᴇʀᴇ ➧ https://t.me/orgprimemovies</b>", disable_web_page_preview=True)
+            return await msg.reply_photo(
+                photo=imdb.get('poster'), 
+                caption=script.PREMIUM_TEXT.format(mv_rqst),
+                reply_markup=InlineKeyboardMarkup(button)
+            )
+
+#(f"<b>Hᴇʏ {message.from_user.mention},\n\n<blockquote>Tᴏᴛᴀʟ <code>{str(total_results)} Rᴇsᴜʟᴛs</code> Aᴠᴀɪʟᴀʙʟᴇ.\nFᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ <code>{search}</code>.</blockquote>\n\nYᴏᴜ Wɪʟʟ Gᴇᴛ Fɪʟᴇs Fʀᴏᴍ Hᴇʀᴇ...\nSᴇᴀʀᴄʜ 🔍 Hᴇʀᴇ ➧ https://t.me/orgprimemovies</b>", disable_web_page_preview=True)
 
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
