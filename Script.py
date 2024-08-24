@@ -165,13 +165,13 @@ Request Again."""
     I_CUDNT = """
 <b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
-<blockquote><u>✓ Recommendations just for you.
+<u>✓ Recommendations just for you.
 ✓ Watch Unlimited as You Want?
 ✓ Enjoy Movies/Series/TVShows.
 ✓ Also Enjoy P🔞RN Content 😋
 ✓ Watch in 480p »to» (4K) Quality.
 ✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u></blockquote>
+✓ Many More Extra Features 🌟</u>
 
 ╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
 │
@@ -218,13 +218,13 @@ Request Again."""
     I_CUD_NT = """
 <b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
-<blockquote><u>✓ Recommendations just for you.
+<u>✓ Recommendations just for you.
 ✓ Watch Unlimited as You Want?
 ✓ Enjoy Movies/Series/TVShows.
 ✓ Also Enjoy P🔞RN Content 😋
 ✓ Watch in 480p »to» (4K) Quality.
 ✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u></blockquote>
+✓ Many More Extra Features 🌟</u>
 
 ╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
 │
@@ -271,13 +271,13 @@ Request Again."""
     MVE_NT_FND = """
 <b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
-<blockquote><u>✓ Recommendations just for you.
+<u>✓ Recommendations just for you.
 ✓ Watch Unlimited as You Want?
 ✓ Enjoy Movies/Series/TVShows.
 ✓ Also Enjoy P🔞RN Content 😋
 ✓ Watch in 480p »to» (4K) Quality.
 ✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u></blockquote>
+✓ Many More Extra Features 🌟</u>
 
 ╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
 │
@@ -461,13 +461,13 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
     PREMIUM_TEXT = """
 <b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
-<blockquote><u>✓ Recommendations just for you.
+<u>✓ Recommendations just for you.
 ✓ Watch Unlimited as You Want?
 ✓ Enjoy Movies/Series/TVShows.
 ✓ Also Enjoy P🔞RN Content 😋
 ✓ Watch in 480p »to» (4K) Quality.
 ✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u></blockquote>
+✓ Many More Extra Features 🌟</u>
 
 ╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
 │
@@ -514,13 +514,13 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
     CPREMIUM_TEXT = """
 <b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
-<blockquote><u>✓ Recommendations just for you.
+<u>✓ Recommendations just for you.
 ✓ Watch Unlimited as You Want?
 ✓ Enjoy Movies/Series/TVShows.
 ✓ Also Enjoy P🔞RN Content 😋
 ✓ Watch in 480p »to» (4K) Quality.
 ✓ Request Group 💬 Available 🤩
-✓ Many More Extra Features 🌟</u></blockquote>
+✓ Many More Extra Features 🌟</u>
 
 ╭───🔅 𝗣𝗟𝗔𝗡 𝗗𝗘𝗧𝗔𝗜𝗟𝗦 🔅───╮
 │
