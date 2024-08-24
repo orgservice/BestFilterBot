@@ -22,7 +22,7 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 #Telegraph
-PICS = (environ.get('PICS', 'https://graph.org/file/f6650a4eb987ab0900afb.jpg https://graph.org/file/76414bc391876745bc38b.jpg https://graph.org/file/7389f3947952c8037b582.jpg')).split() #SAMPLE PIC
+PICS = (environ.get('PICS', 'https://graph.org/file/54fde3e34103198dabaea.jpg')).split() #SAMPLE PIC
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/3af3fe9ff92d1a6c98c1d.png")
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/4e1556928e3bdcaaa3373.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/e06089d66b2b556816e3d.jpg")
@@ -54,9 +54,9 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Collection')
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002139713029'))
 
 # Others
-VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
-SHORTLINK_API = environ.get('SHORTLINK_API', '')
+VERIFY = bool(environ.get('VERIFY', True))
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'publicearn.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '97119e40c5fc3875820a6c37253b3c3bcee51a9d')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
@@ -64,13 +64,13 @@ MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/moviespremium')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/orgprime')
-TUTORIAL = environ.get('TUTORIAL', '')
-IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/orgpremium/7')
+IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', 'Hello My Dear Friends ❤️')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002139713029'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'moviespremium')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
-IMDB = is_enabled((environ.get('IMDB', "True")), True)
+IMDB = is_enabled((environ.get('IMDB', "False")), False)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
