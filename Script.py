@@ -335,11 +335,16 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
 
     PURCHASE_TXT = """✅ Sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴘᴀʏᴍᴇɴᴛ ᴍᴇᴛʜᴏᴅ ✅"""
 
-    MINFO_TXT = """
+    TINFO_TXT = """
+<b>Hᴇʏ {message.from_user.mention},</b>
+
+<blockquote><b>Tᴏᴛᴀʟ <code>{str(total_results)} Rᴇsᴜʟᴛs</code> Aᴠᴀɪʟᴀʙʟᴇ.
+Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ <code>{search}</code></b></blockquote>
+
 <blockquote>♻ Buy Subscription & Enjoy 😍 Ads-Free... Movies/Series 😍</blockquote>
     
-```🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs :
-○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
+<pre"🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs :"
+>○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
 ○ ᴇɴᴊᴏʏ ᴅᴀɪʟʏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs/ᴛᴠsʜᴏᴡs.
 ○ ᴇɴᴊᴏʏ ᴘᴏʀɴ 🔞 ﹠ ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟs.
 ○ ᴡᴀᴛᴄʜ ɪɴ 𝟺𝟾𝟶ᴘ »ᴛᴏ»﹙𝟺ᴋ﹚ʜᴅʀ ϙᴜᴀʟɪᴛʏ.
@@ -354,7 +359,7 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
 ○ ꜰᴜʟʟ 𝟸𝟺𝔵𝟽 ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ 💬
 ○ ɴᴏ ᴇxᴛʀᴀ ғᴇᴇ. ʙᴜᴛ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs 🎉
 ○ 𝟷𝟶𝟶% ᴛʀᴜsᴛᴇᴅ ᴄʜᴀɴɴᴇʟ.
-✓ ᴍᴀɴʏ ᴍᴏʀᴇ....```
+✓ ᴍᴀɴʏ ᴍᴏʀᴇ....</pre>
 
 <blockquote>Don't Waste Your Time to Search 🔍 Movies On Telegram...or Bypassing Irritating [Ads] Link......</blockquote>
 
