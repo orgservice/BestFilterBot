@@ -936,7 +936,7 @@ async def requests(bot, message):
         #chat = int(chat)'''
         link = await bot.create_chat_invite_link(int(REQST_CHANNEL))
         btn = [[
-                InlineKeyboardButton('Join Channel', url=link.invite_link),
+                InlineKeyboardButton('Join Channel', url=f"https://t.me/+XIFvZdfRYt42YWY1"),
                 InlineKeyboardButton('View Request', url=f"{reported_post.link}")
               ]]
         await message.reply_text("<b>Your Request has been added! Please wait for some time.\n\nJoin Channel First & View Request</b>", reply_markup=InlineKeyboardMarkup(btn))
