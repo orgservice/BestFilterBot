@@ -336,8 +336,10 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
     PURCHASE_TXT = """✅ Sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴘᴀʏᴍᴇɴᴛ ᴍᴇᴛʜᴏᴅ ✅"""
 
     MINFO_TXT = """
-<b>🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs :</b>
-<blockquote>○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
+<blockquote>♻ Buy Subscription & Enjoy 😍 Ads-Free... Movies/Series 😍</blockquote>
+    
+```🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs :
+○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
 ○ ᴇɴᴊᴏʏ ᴅᴀɪʟʏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs/ᴛᴠsʜᴏᴡs.
 ○ ᴇɴᴊᴏʏ ᴘᴏʀɴ 🔞 ﹠ ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟs.
 ○ ᴡᴀᴛᴄʜ ɪɴ 𝟺𝟾𝟶ᴘ »ᴛᴏ»﹙𝟺ᴋ﹚ʜᴅʀ ϙᴜᴀʟɪᴛʏ.
@@ -352,7 +354,9 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
 ○ ꜰᴜʟʟ 𝟸𝟺𝔵𝟽 ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ 💬
 ○ ɴᴏ ᴇxᴛʀᴀ ғᴇᴇ. ʙᴜᴛ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs 🎉
 ○ 𝟷𝟶𝟶% ᴛʀᴜsᴛᴇᴅ ᴄʜᴀɴɴᴇʟ.
-✓ ᴍᴀɴʏ ᴍᴏʀᴇ....</blockquote>
+✓ ᴍᴀɴʏ ᴍᴏʀᴇ....```
+
+<blockquote>Don't Waste Your Time to Search 🔍 Movies On Telegram...or Bypassing Irritating [Ads] Link......</blockquote>
 
 <b><i>Enjoy Movies in Just 1 Click 😍😘</i></b>"""
     
