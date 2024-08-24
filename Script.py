@@ -335,6 +335,37 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
 
     PURCHASE_TXT = """✅ Sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴘᴀʏᴍᴇɴᴛ ᴍᴇᴛʜᴏᴅ ✅"""
 
+    MSG_TEXT = """Hᴇʏ {message.from_user.mention},
+
+Tᴏᴛᴀʟ {str(total_results)} Rᴇsᴜʟᴛs Aᴠᴀɪʟᴀʙʟᴇ.
+Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.
+
+♻ Buy Subscription & Enjoy 😍 Ads-Free... Movies/Series 😍
+
+```🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs :
+○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
+○ ᴇɴᴊᴏʏ ᴅᴀɪʟʏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs/ᴛᴠsʜᴏᴡs.
+○ ᴇɴᴊᴏʏ ᴘᴏʀɴ 🔞 ﹠ ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟs.
+○ ᴡᴀᴛᴄʜ ɪɴ 𝟺𝟾𝟶ᴘ »ᴛᴏ»﹙𝟺ᴋ﹚ʜᴅʀ ϙᴜᴀʟɪᴛʏ.
+○ ᴇɴᴊᴏʏ ᴅɪʀᴇᴄᴛ ᴍᴏᴠɪᴇs 🎥  ᴏɴ ᴄʜᴀɴɴᴇʟ.
+○ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ﹠ ɢᴇᴛ 𝟽 ᴄʜᴀɴɴᴇʟ.
+○ ʀᴇϙᴜᴇsᴛ ɢʀᴏᴜᴘ 💬 ᴀᴠᴀɪʟᴀʙʟᴇ 🔥
+○ ʀᴇǫᴜᴇsᴛ ᴡɪʟʟ ᴄᴏᴍᴘʟᴇᴛᴇ ɪɴ 1 ʜᴏᴜʀ.
+○ 𝗡𝗼 𝗡𝗲𝗲𝗱 𝘁𝗼 𝗢𝗽𝗲𝗻 𝗔𝗗'𝗦 𝗟𝗶𝗻𝗸 🔥 
+○ ᴇɴᴊᴏʏ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ.
+○ ɢᴇɴᴇʀᴀᴛᴇ ʜɪɢʜ-sᴘᴇᴇᴅ 🚀 ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ          
+○ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs.                      
+○ ꜰᴜʟʟ 𝟸𝟺𝔵𝟽 ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ 💬
+○ ɴᴏ ᴇxᴛʀᴀ ғᴇᴇ. ʙᴜᴛ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs 🎉
+○ 𝟷𝟶𝟶% ᴛʀᴜsᴛᴇᴅ ᴄʜᴀɴɴᴇʟ.
+✓ ᴍᴀɴʏ ᴍᴏʀᴇ....```
+
+Starting ₹100 Only [For 1 Year] 😱
+
+Don't Waste Your Time to Search 🔍 Movies On Telegram...or Bypassing Irritating [Ads] Link......
+
+Enjoy Movies in Just 1 Click 😍😘"""
+    
     PREMIUM_TEXT = """
 <b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
 
