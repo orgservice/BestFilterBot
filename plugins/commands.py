@@ -934,6 +934,7 @@ async def requests(bot, message):
         for channel in channels:
             chat = await bot.get_chat(channel)
         #chat = int(chat)'''
+	user = await client.get_users(from_user)
         link = await bot.create_chat_invite_link(int(REQST_CHANNEL))
         btn = [[
                 InlineKeyboardButton('Join Channel', url=f"https://t.me/+XIFvZdfRYt42YWY1"),
