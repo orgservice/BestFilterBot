@@ -340,8 +340,6 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
 Tᴏᴛᴀʟ {str(total_results)} Rᴇsᴜʟᴛs Aᴠᴀɪʟᴀʙʟᴇ.
 Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.
 
-♻ Buy Subscription & Enjoy 😍 Ads-Free... Movies/Series 😍
-
 ```🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs :
 ○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
 ○ ᴇɴᴊᴏʏ ᴅᴀɪʟʏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs/ᴛᴠsʜᴏᴡs.
@@ -359,10 +357,6 @@ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.
 ○ ɴᴏ ᴇxᴛʀᴀ ғᴇᴇ. ʙᴜᴛ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs 🎉
 ○ 𝟷𝟶𝟶% ᴛʀᴜsᴛᴇᴅ ᴄʜᴀɴɴᴇʟ.
 ✓ ᴍᴀɴʏ ᴍᴏʀᴇ....```
-
-Starting ₹100 Only [For 1 Year] 😱
-
-Don't Waste Your Time to Search 🔍 Movies On Telegram...or Bypassing Irritating [Ads] Link......
 
 Enjoy Movies in Just 1 Click 😍😘"""
     
