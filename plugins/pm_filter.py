@@ -69,7 +69,7 @@ async def give_filter(client, message):
         if total_results == 0:
             return
         else:
-            return await message.reply_photo(photo="https://graph.org/file/54fde3e34103198dabaea.jpg", caption=script.MSG_TEXT.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(button))
+            return await message.reply_photo(photo="https://graph.org/file/54fde3e34103198dabaea.jpg", caption=script.MINFO_TXT.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(button))
 
 #(f"<b>Hᴇʏ {message.from_user.mention},\n\n<blockquote>Tᴏᴛᴀʟ <code>{str(total_results)} Rᴇsᴜʟᴛs</code> Aᴠᴀɪʟᴀʙʟᴇ.\nFᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ <code>{search}</code>.</blockquote>\n\nYᴏᴜ Wɪʟʟ Gᴇᴛ Fɪʟᴇs Fʀᴏᴍ Hᴇʀᴇ...\nSᴇᴀʀᴄʜ 🔍 Hᴇʀᴇ ➧ https://t.me/orgprimemovies</b>", disable_web_page_preview=True)
 
