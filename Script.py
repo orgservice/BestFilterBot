@@ -343,8 +343,8 @@ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ <code>{search}</code></b></blockquote>
 
 <blockquote>♻ Buy Subscription & Enjoy 😍 Ads-Free... Movies/Series 😍</blockquote>
     
-<pre"🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs :"
->○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
+<b>"🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs :</b>
+<blockquote>○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
 ○ ᴇɴᴊᴏʏ ᴅᴀɪʟʏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs/ᴛᴠsʜᴏᴡs.
 ○ ᴇɴᴊᴏʏ ᴘᴏʀɴ 🔞 ﹠ ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟs.
 ○ ᴡᴀᴛᴄʜ ɪɴ 𝟺𝟾𝟶ᴘ »ᴛᴏ»﹙𝟺ᴋ﹚ʜᴅʀ ϙᴜᴀʟɪᴛʏ.
@@ -359,7 +359,7 @@ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ <code>{search}</code></b></blockquote>
 ○ ꜰᴜʟʟ 𝟸𝟺𝔵𝟽 ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ 💬
 ○ ɴᴏ ᴇxᴛʀᴀ ғᴇᴇ. ʙᴜᴛ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs 🎉
 ○ 𝟷𝟶𝟶% ᴛʀᴜsᴛᴇᴅ ᴄʜᴀɴɴᴇʟ.
-✓ ᴍᴀɴʏ ᴍᴏʀᴇ....</pre>
+✓ ᴍᴀɴʏ ᴍᴏʀᴇ....</blockquote>
 
 <blockquote>Don't Waste Your Time to Search 🔍 Movies On Telegram...or Bypassing Irritating [Ads] Link......</blockquote>
 
