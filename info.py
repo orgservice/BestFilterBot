@@ -53,9 +53,9 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Collection')
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002139713029'))
 
 # Others
-VERIFY = bool(environ.get('VERIFY', True))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'gplinks.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '05f37d34abed37ae8993d82a8f98af17d7ec2376')
+VERIFY = bool(environ.get('VERIFY', False))
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'publicearn.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '97119e40c5fc3875820a6c37253b3c3bcee51a9d')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
@@ -63,14 +63,14 @@ MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/moviespremium')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/orgprime')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/orgpremium/2')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/orgpremium/7')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', 'Hello My Dear Friends ❤️')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002139713029'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'moviespremium')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
-AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
+AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "False")), False)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
@@ -99,8 +99,8 @@ else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "https://imaxfiltersbot-10fc597b72fd.herokuapp.com/".format(FQDN) if ON_HEROKU or NO_PORT else \
-    "https://imaxfiltersbot-10fc597b72fd.herokuapp.com/".format(FQDN, PORT)
+URL = "https://imaxfilterbot-99edf979b3f5.herokuapp.com/".format(FQDN) if ON_HEROKU or NO_PORT else \
+    "https://imaxfilterbot-99edf979b3f5.herokuapp.com/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
@@ -115,9 +115,9 @@ else:
     ON_HEROKU = False
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "https://imaxfiltersbot-10fc597b72fd.herokuapp.com/".format(FQDN)
+    URL = "https://imaxfilterbot-99edf979b3f5.herokuapp.com/".format(FQDN)
 else:
-    URL = "https://imaxfiltersbot-10fc597b72fd.herokuapp.com/".format(FQDN)
+    URL = "https://imaxfilterbot-99edf979b3f5.herokuapp.com/".format(FQDN)
     
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
