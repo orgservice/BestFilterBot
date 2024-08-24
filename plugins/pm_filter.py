@@ -70,11 +70,7 @@ async def give_filter(client, message):
         if total_results == 0:
             return
         else:
-            return await msg.reply_photo(
-                photo=imdb.get('poster'), 
-                caption=script.PREMIUM_TEXT.format(mv_rqst),
-                reply_markup=InlineKeyboardMarkup(button)
-            )
+            return await message.reply_photo(photo=imdb.get('poster'), caption=script.PREMIUM_TEXT.format(mv_rqst), reply_markup=InlineKeyboardMarkup(button))
 
 #(f"<b>Hᴇʏ {message.from_user.mention},\n\n<blockquote>Tᴏᴛᴀʟ <code>{str(total_results)} Rᴇsᴜʟᴛs</code> Aᴠᴀɪʟᴀʙʟᴇ.\nFᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ <code>{search}</code>.</blockquote>\n\nYᴏᴜ Wɪʟʟ Gᴇᴛ Fɪʟᴇs Fʀᴏᴍ Hᴇʀᴇ...\nSᴇᴀʀᴄʜ 🔍 Hᴇʀᴇ ➧ https://t.me/orgprimemovies</b>", disable_web_page_preview=True)
 
