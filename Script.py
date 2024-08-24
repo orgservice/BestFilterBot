@@ -335,13 +335,9 @@ Hello!! <a href='tg://settings'>My Friend 🤗</a>
 
     PURCHASE_TXT = """✅ Sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴘᴀʏᴍᴇɴᴛ ᴍᴇᴛʜᴏᴅ ✅"""
 
-    MSG_TEXT = """Hᴇʏ {message.from_user.mention},
-
-Tᴏᴛᴀʟ {str(total_results)} Rᴇsᴜʟᴛs Aᴠᴀɪʟᴀʙʟᴇ.
-Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.
-
-```🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs :
-○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
+    MINFO_TXT = """
+<b>🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs :</b>
+<blockquote>○ ᴡᴀᴛᴄʜ ᴀʟʟ ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.
 ○ ᴇɴᴊᴏʏ ᴅᴀɪʟʏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs/ᴛᴠsʜᴏᴡs.
 ○ ᴇɴᴊᴏʏ ᴘᴏʀɴ 🔞 ﹠ ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟs.
 ○ ᴡᴀᴛᴄʜ ɪɴ 𝟺𝟾𝟶ᴘ »ᴛᴏ»﹙𝟺ᴋ﹚ʜᴅʀ ϙᴜᴀʟɪᴛʏ.
@@ -356,9 +352,9 @@ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.
 ○ ꜰᴜʟʟ 𝟸𝟺𝔵𝟽 ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ 💬
 ○ ɴᴏ ᴇxᴛʀᴀ ғᴇᴇ. ʙᴜᴛ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs 🎉
 ○ 𝟷𝟶𝟶% ᴛʀᴜsᴛᴇᴅ ᴄʜᴀɴɴᴇʟ.
-✓ ᴍᴀɴʏ ᴍᴏʀᴇ....```
+✓ ᴍᴀɴʏ ᴍᴏʀᴇ....</blockquote>
 
-Enjoy Movies in Just 1 Click 😍😘"""
+<b><i>Enjoy Movies in Just 1 Click 😍😘</i></b>"""
     
     PREMIUM_TEXT = """
 <b>[ @ORGPrime ] – ⏤͟͞RELEASE PREMIUM SUBSCRIPTION 🎉🥳
