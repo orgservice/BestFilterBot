@@ -45,6 +45,34 @@ BUTTONS2 = {}
 SPELL_CHECK = {}
 # ENABLE_SHORTLINK = ""
 
+@Client.on_message(filters.group & filters.text & filters.incoming)
+async def give_filter(client, message):
+    if message.chat.id == SUPPORT_CHAT_ID or message.chat.id == MASTER_CHAT_ID:
+        manual = await manual_filters(client, message)
+        if manual == False:
+            settings = await get_settings(message.chat.id)
+            try:
+                if settings['auto_ffilter']:
+                    await auto_filter(client, message)
+            except KeyError:
+                grpid = await active_connection(str(message.from_user.id))
+                await save_group_settings(grpid, 'auto_ffilter', True)
+                settings = await get_settings(message.chat.id)
+                if settings['auto_ffilter']:
+                    await auto_filter(client, message) 
+    else: #a better logic to avoid repeated lines of code in auto_filter function
+        search = message.text
+        temp_files, temp_offset, total_results = await get_search_results(chat_id=message.chat.id, query=search.lower(), offset=0, filter=True)
+        button = [[
+                       InlineKeyboardButton("✅ Bᴜʏ Sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✅", url=f"https://t.me/ORGPrime/25")
+        ]]
+        if total_results == 0:
+            return
+        else:
+            return await message.reply_photo(photo="https://graph.org/file/54fde3e34103198dabaea.jpg", caption=script.MSG_TEXT.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(button))
+
+#(f"<b>Hᴇʏ {message.from_user.mention},\n\n<blockquote>Tᴏᴛᴀʟ <code>{str(total_results)} Rᴇsᴜʟᴛs</code> Aᴠᴀɪʟᴀʙʟᴇ.\nFᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ <code>{search}</code>.</blockquote>\n\nYᴏᴜ Wɪʟʟ Gᴇᴛ Fɪʟᴇs Fʀᴏᴍ Hᴇʀᴇ...\nSᴇᴀʀᴄʜ 🔍 Hᴇʀᴇ ➧ https://t.me/orgprimemovies</b>", disable_web_page_preview=True)
+
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
@@ -2024,37 +2052,6 @@ async def auto_filter(client, msg, spoll=False):
             await asyncio.sleep(300)
             await fuk.delete()
             await message.delete()
-
-@Client.on_message(filters.group & filters.text & filters.incoming)
-async def give_filter(client, message):
-    if message.chat.id == SUPPORT_CHAT_ID or message.chat.id == MASTER_CHAT_ID:
-        manual = await manual_filters(client, message)
-        if manual == False:
-            settings = await get_settings(message.chat.id)
-            try:
-                if settings['auto_ffilter']:
-                    await auto_filter(client, message)
-            except KeyError:
-                grpid = await active_connection(str(message.from_user.id))
-                await save_group_settings(grpid, 'auto_ffilter', True)
-                settings = await get_settings(message.chat.id)
-                if settings['auto_ffilter']:
-                    await auto_filter(client, message) 
-    else: #a better logic to avoid repeated lines of code in auto_filter function
-        search = message.text
-        temp_files, temp_offset, total_results = await get_search_results(chat_id=message.chat.id, query=search.lower(), offset=0, filter=True)
-        button = [[
-                       InlineKeyboardButton("✅ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✅", url=f"https://t.me/ORGPrime/25")
-        ]]
-        if total_results == 0:
-            return
-        else:
-            if imdb and imdb.get('poster'):
-                try:
-                    return await message.reply_photo(photo=imdb.get('poster'), caption=script.PREMIUM_TEXT.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(button))
-
-#(f"<b>Hᴇʏ {message.from_user.mention},\n\n<blockquote>Tᴏᴛᴀʟ <code>{str(total_results)} Rᴇsᴜʟᴛs</code> Aᴠᴀɪʟᴀʙʟᴇ.\nFᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ <code>{search}</code>.</blockquote>\n\nYᴏᴜ Wɪʟʟ Gᴇᴛ Fɪʟᴇs Fʀᴏᴍ Hᴇʀᴇ...\nSᴇᴀʀᴄʜ 🔍 Hᴇʀᴇ ➧ https://t.me/orgprimemovies</b>", disable_web_page_preview=True)
-
 
 async def advantage_spell_chok(client, msg):
     mv_id = msg.id
