@@ -857,7 +857,7 @@ async def plan(client, message):
 @Client.on_message((filters.command(["request", "Request"]) | filters.regex("#request") | filters.regex("#Request")) & filters.group)
 async def requests(bot, message):
     if REQST_CHANNEL is None or SUPPORT_CHAT_ID is None: return # Must add REQST_CHANNEL and SUPPORT_CHAT_ID to use this feature
-    if message.reply_to_message and SUPPORT_CHAT_ID != message.chat.id:
+    if message.reply_to_message and SUPPORT_CHAT_ID == message.chat.id:
         chat_id = message.chat.id
         reporter = str(message.from_user.id)
         mention = message.from_user.mention
@@ -888,7 +888,7 @@ async def requests(bot, message):
             await message.reply_text(f"Error: {e}")
             pass
         
-    elif SUPPORT_CHAT_ID != message.chat.id:
+    elif SUPPORT_CHAT_ID == message.chat.id:
         chat_id = message.chat.id
         reporter = str(message.from_user.id)
         mention = message.from_user.mention
@@ -936,7 +936,7 @@ async def requests(bot, message):
         #chat = int(chat)'''
         link = await bot.create_chat_invite_link(int(REQST_CHANNEL))
         btn = [[
-                InlineKeyboardButton('Join Channel', url=f"https://t.me/+XIFvZdfRYt42YWY1"),
+                InlineKeyboardButton('Join Channel', url=f"https://t.me/c/2127187291/9999999"),
                 InlineKeyboardButton('View Request', url=f"{reported_post.link}")
               ]]
         await client.send_message(chat_id=int(from_user), text=f"<b>Your Request has been added! Please wait for some time.\n\nJoin Channel First & View Request</b>", reply_markup=InlineKeyboardMarkup(btn))
