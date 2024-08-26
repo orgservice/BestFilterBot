@@ -29,7 +29,7 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/e06089d66b2b556816e
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/ce2103c2c9a160ff1d38f.jpg'))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6924461727').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6924461727 5378316778').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002055068009').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '5378316778').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -97,13 +97,13 @@ NO_PORT = bool(environ.get('NO_PORT', False))
 APP_NAME = None
 if 'DYNO' in environ:
     ON_HEROKU = True
-    APP_NAME = environ.get('APP_NAME', "primefiltersbot")
+    APP_NAME = environ.get('APP_NAME', "BestFilterBot")
 else:
     ON_HEROKU = False
-BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
+BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '89.116.34.147'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "https://primefilterbot-14028ea387ed.herokuapp.com/".format(FQDN) if ON_HEROKU or NO_PORT else \
-    "https://primefilterbot-14028ea387ed.herokuapp.com/".format(FQDN, PORT)
+URL = "89.116.34.147".format(FQDN) if ON_HEROKU or NO_PORT else \
+    "89.116.34.147".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
@@ -118,9 +118,9 @@ else:
     ON_HEROKU = False
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "https://primefilterbot-14028ea387ed.herokuapp.com/".format(FQDN)
+    URL = "89.116.34.147".format(FQDN)
 else:
-    URL = "https://primefilterbot-14028ea387ed.herokuapp.com/".format(FQDN)
+    URL = "89.116.34.147".format(FQDN)
     
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
