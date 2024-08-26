@@ -1171,7 +1171,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data.startswith("notinhindi"):
         ident, from_user = query.data.split("#")
         btn = [[
-                InlineKeyboardButton("⚠️ Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ Iɴ Hɪɴᴅɪ 📝", callback_data=f"unalert#{from_user}")
+                InlineKeyboardButton("⚠️ Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ Iɴ Hɪɴᴅɪ 📝", callback_data=f"INalert#{from_user}")
               ]]
         btn2 = [[
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
@@ -1193,7 +1193,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data.startswith("notreleased"):
         ident, from_user = query.data.split("#")
         btn = [[
-                InlineKeyboardButton("⚠️ Nᴏᴛ Rᴇʟᴇᴀsᴇᴅ 😐", callback_data=f"unalert#{from_user}")
+                InlineKeyboardButton("⚠️ Nᴏᴛ Rᴇʟᴇᴀsᴇᴅ 😐", callback_data=f"NRalert#{from_user}")
               ]]
         btn2 = [[
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
@@ -1271,6 +1271,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if int(query.from_user.id) == int(from_user):
             user = await client.get_users(from_user)
             await query.answer(f"Hᴇʏ {user.first_name}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ ɪs Uᴘʟᴏᴀᴅᴇᴅ !", show_alert=True)
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("INalert"):
+        ident, from_user = query.data.split("#")
+        if int(query.from_user.id) == int(from_user):
+            user = await client.get_users(from_user)
+            await query.answer(f"Hᴇʏ {user.first_name}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ ɪs Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ Iɴ Hɪɴᴅɪ 📝 !", show_alert=True)
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("NRalert"):
+        ident, from_user = query.data.split("#")
+        if int(query.from_user.id) == int(from_user):
+            user = await client.get_users(from_user)
+            await query.answer(f"Hᴇʏ {user.first_name}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ ɪs Nᴏᴛ Rᴇʟᴇᴀsᴇᴅ 😐 !", show_alert=True)
         else:
             await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
         
