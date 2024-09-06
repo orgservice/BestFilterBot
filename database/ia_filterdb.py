@@ -104,7 +104,7 @@ async def save_file(media):
 
 
 
-async def get_search_results(chat_id, query, file_type=video, max_results=10, offset=0, filter=False):
+async def get_search_results(chat_id, query, file_type=None, max_results=10, offset=0, filter=False):
     """For given query return (results, next_offset)"""
     if chat_id is not None:
         settings = await get_settings(int(chat_id))
@@ -143,7 +143,7 @@ async def get_search_results(chat_id, query, file_type=video, max_results=10, of
         filter = {'file_name': regex}
 
     if file_type:
-        filter['file_type'] = file_type
+        filter['file_type'] = "video"
 
     total_results = ((await Media.count_documents(filter))+(await Media2.count_documents(filter)))
 
