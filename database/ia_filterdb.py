@@ -30,7 +30,7 @@ class Media(Document):
     file_ref = fields.StrField(allow_none=True)
     file_name = fields.StrField(required=True)
     file_size = fields.IntField(required=True)
-    file_type = fields.StrField(allow_none=True)
+    file_type = fields.StrField(video)
     mime_type = fields.StrField(allow_none=True)
     caption = fields.StrField(allow_none=True)
 
@@ -49,7 +49,7 @@ class Media2(Document):
     file_ref = fields.StrField(allow_none=True)
     file_name = fields.StrField(required=True)
     file_size = fields.IntField(required=True)
-    file_type = fields.StrField(allow_none=True)
+    file_type = fields.StrField(video)
     mime_type = fields.StrField(allow_none=True)
     caption = fields.StrField(allow_none=True)
 
@@ -104,7 +104,7 @@ async def save_file(media):
 
 
 
-async def get_search_results(chat_id, query, file_type=None, max_results=10, offset=0, filter=False):
+async def get_search_results(chat_id, query, file_type, max_results=10, offset=0, filter=False):
     """For given query return (results, next_offset)"""
     if chat_id is not None:
         settings = await get_settings(int(chat_id))
@@ -143,7 +143,7 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
         filter = {'file_name': regex}
 
     if file_type:
-        filter['file_type'] = "video"
+        filter['file_type'] = file_type
 
     total_results = ((await Media.count_documents(filter))+(await Media2.count_documents(filter)))
 
