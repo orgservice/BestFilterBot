@@ -143,7 +143,7 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
         filter = {'file_name': regex}
 
     if file_type:
-        filter = {'file_name': "video"}
+        filter['file_type'] = file_type
 
     total_results = ((await Media.count_documents(filter))+(await Media2.count_documents(filter)))
 
