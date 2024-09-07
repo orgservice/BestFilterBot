@@ -1132,8 +1132,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
              ],[
                 InlineKeyboardButton("Aʟʀᴇᴀᴅʏ Aᴠᴀɪʟᴀʙʟᴇ ⚡", callback_data=f"already_available#{from_user}")
              ],[
-                InlineKeyboardButton("Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ Iɴ Hɪɴᴅɪ 📝", callback_data=f"notinhindi#{from_user}"),
+                InlineKeyboardButton("Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ Iɴ Hɪɴᴅɪ 📝", callback_data=f"notinhindi#{from_user}")
+             ],[
                 InlineKeyboardButton("Nᴏᴛ Rᴇʟᴇᴀsᴇᴅ 😐", callback_data=f"notreleased#{from_user}")
+             ],[
+                InlineKeyboardButton("Fɪʀsᴛ Cᴏᴍᴘʟᴇᴛᴇ ﹟Rᴇϙᴜᴇsᴛ 📝", callback_data=f"incomplete#{from_user}")
+             ],[
+                InlineKeyboardButton("Sᴇɴᴅ Iᴍᴅʙ Lɪɴᴋ 🔗", callback_data=f"imdblink#{from_user}")
+             ],[
+                InlineKeyboardButton("Cʜᴇᴄᴋ Iɴ Wᴇʙ Sᴇʀɪᴇs Cʜᴀɴɴᴇʟ ✅", callback_data=f"serieschannel#{from_user}")
+             ],[
+                InlineKeyboardButton("Cᴏᴍʙɪɴᴇᴅ Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ 🙅", callback_data=f"combined#{from_user}")
+             ],[
+                InlineKeyboardButton("🧑‍💻 Uᴘʟᴏᴀᴅɪɴɢ Sᴏᴏɴ... ⚡", callback_data=f"soon#{from_user}")
              ]]
         btn2 = [[
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
@@ -1255,6 +1266,160 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await client.send_message(chat_id=int(from_user), text=f"<b>Hᴇʏ {user.mention}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Is Aʟʀᴇᴀᴅʏ Aᴠᴀɪʟᴀʙʟᴇ Oɴ Oᴜʀ Bᴏᴛ's Dᴀᴛᴀʙᴀsᴇ. Kɪɴᴅʟʏ Sᴇᴀʀᴄʜ 🔍 Iɴ Oᴜʀ Dᴀᴛᴀʙᴀsᴇ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
             except UserIsBlocked:
                 await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text=f"<b>Hᴇʏ {user.mention}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Is Aʟʀᴇᴀᴅʏ Aᴠᴀɪʟᴀʙʟᴇ Oɴ Oᴜʀ Bᴏᴛ's Dᴀᴛᴀʙᴀsᴇ. Kɪɴᴅʟʏ Sᴇᴀʀᴄʜ 🔍 Iɴ Oᴜʀ Dᴀᴛᴀʙᴀsᴇ.\n\nNᴏᴛᴇ: Tʜɪs ᴍᴇssᴀɢᴇ ɪs sᴇɴᴛ ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ ʙᴇᴄᴀᴜsᴇ ʏᴏᴜ'ᴠᴇ ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ. Tᴏ sᴇɴᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ PM, Mᴜsᴛ ᴜɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("incomplete"):
+        ident, from_user = query.data.split("#")
+        btn = [[
+                InlineKeyboardButton("Fɪʀsᴛ Cᴏᴍᴘʟᴇᴛᴇ ﹟Rᴇϙᴜᴇsᴛ 📝", callback_data=f"Falert#{from_user}")
+              ]]
+        btn2 = [[
+                 InlineKeyboardButton('Rᴇϙᴜᴇsᴛ Fᴏʀᴍᴀᴛ 📝', url=f"https://t.me/c/2127187291/15"),
+                 InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
+               ]]
+        if query.from_user.id in ADMINS:
+            user = await client.get_users(from_user)
+            reply_markup = InlineKeyboardMarkup(btn)
+            content = query.message.text
+            await query.message.edit_text(f"<b><strike>{content}</strike></b>")
+            await query.message.edit_reply_markup(reply_markup)
+            await query.answer("Sᴇᴛ ᴛᴏ Uᴘʟᴏᴀᴅᴇᴅ !")
+            try:
+                await client.send_message(chat_id=int(from_user), text=f"<b>Hᴇʏ {user.mention}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Is Nᴏᴛ Cᴏᴍᴘʟᴇᴛᴇ Tʜᴀᴛ's Wʜʏ Rᴇᴊᴇᴄᴛᴇᴅ Bʏ Oᴜʀ Mᴏᴅᴇʀᴀᴛᴏʀs. Fɪʀsᴛ Cᴏᴍᴘʟᴇᴛᴇ ﹟Rᴇϙᴜᴇsᴛ 📝.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+            except UserIsBlocked:
+                await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text=f"<b>Hᴇʏ {user.mention}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Is Nᴏᴛ Cᴏᴍᴘʟᴇᴛᴇ Tʜᴀᴛ's Wʜʏ Rᴇᴊᴇᴄᴛᴇᴅ Bʏ Oᴜʀ Mᴏᴅᴇʀᴀᴛᴏʀs. Fɪʀsᴛ Cᴏᴍᴘʟᴇᴛᴇ ﹟Rᴇϙᴜᴇsᴛ 📝.\n\nNᴏᴛᴇ: Tʜɪs ᴍᴇssᴀɢᴇ ɪs sᴇɴᴛ ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ ʙᴇᴄᴀᴜsᴇ ʏᴏᴜ'ᴠᴇ ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ. Tᴏ sᴇɴᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ PM, Mᴜsᴛ ᴜɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("Falert"):
+        ident, from_user = query.data.split("#")
+        if int(query.from_user.id) == int(from_user):
+            user = await client.get_users(from_user)
+            await query.answer(f"Hᴇʏ {user.first_name}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Is Nᴏᴛ Cᴏᴍᴘʟᴇᴛᴇ. Fɪʀsᴛ Cᴏᴍᴘʟᴇᴛᴇ ﹟Rᴇϙᴜᴇsᴛ 📝 !", show_alert=True)
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("serieschannel"):
+        ident, from_user = query.data.split("#")
+        btn = [[
+                InlineKeyboardButton("✅ Cʜᴇᴄᴋ Iɴ Wᴇʙ Sᴇʀɪᴇs Cʜᴀɴɴᴇʟ ✅", callback_data=f"Salert#{from_user}")
+              ]]
+        btn2 = [[
+                 InlineKeyboardButton('Sᴇᴀʀᴄʜ 🔍', url=f"https://t.me/c/1532385890/999999"),
+                 InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
+               ]]
+        if query.from_user.id in ADMINS:
+            user = await client.get_users(from_user)
+            reply_markup = InlineKeyboardMarkup(btn)
+            content = query.message.text
+            await query.message.edit_text(f"<b><strike>{content}</strike></b>")
+            await query.message.edit_reply_markup(reply_markup)
+            await query.answer("Sᴇᴛ ᴛᴏ Uᴘʟᴏᴀᴅᴇᴅ !")
+            try:
+                await client.send_message(chat_id=int(from_user), text=f"<b>Hᴇʏ {user.mention}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Hᴀs Bᴇᴇɴ Uᴘʟᴏᴀᴅᴇᴅ Bʏ Oᴜʀ Mᴏᴅᴇʀᴀᴛᴏʀs. Kɪɴᴅʟʏ Sᴇᴀʀᴄʜ Iɴ Oᴜʀ Wᴇʙ Sᴇʀɪᴇs Cʜᴀɴɴᴇʟ ✅.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+            except UserIsBlocked:
+                await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text=f"<b>Hᴇʏ {user.mention}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Hᴀs Bᴇᴇɴ Uᴘʟᴏᴀᴅᴇᴅ Bʏ Oᴜʀ Mᴏᴅᴇʀᴀᴛᴏʀs. Kɪɴᴅʟʏ Sᴇᴀʀᴄʜ Iɴ Oᴜʀ DWᴇʙ Sᴇʀɪᴇs Cʜᴀɴɴᴇʟ ✅.\n\nNᴏᴛᴇ: Tʜɪs ᴍᴇssᴀɢᴇ ɪs sᴇɴᴛ ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ ʙᴇᴄᴀᴜsᴇ ʏᴏᴜ'ᴠᴇ ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ. Tᴏ sᴇɴᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ PM, Mᴜsᴛ ᴜɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("Salert"):
+        ident, from_user = query.data.split("#")
+        if int(query.from_user.id) == int(from_user):
+            user = await client.get_users(from_user)
+            await query.answer(f"Hᴇʏ {user.first_name}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Is Uᴘʟᴏᴀᴅᴇᴅ ✅ !", show_alert=True)
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("imdblink"):
+        ident, from_user = query.data.split("#")
+        btn = [[
+                InlineKeyboardButton("♻️ Sᴇɴᴅ Iᴍᴅʙ Lɪɴᴋ 🔗", callback_data=f"Ialert#{from_user}")
+              ]]
+        btn2 = [[
+                 InlineKeyboardButton('Sᴇᴀʀᴄʜ Oɴ Gᴏᴏɢʟᴇ 🔍', url=f"https://google.com"),
+                 InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
+               ]]
+        if query.from_user.id in ADMINS:
+            user = await client.get_users(from_user)
+            reply_markup = InlineKeyboardMarkup(btn)
+            content = query.message.text
+            await query.message.edit_text(f"<b><strike>{content}</strike></b>")
+            await query.message.edit_reply_markup(reply_markup)
+            await query.answer("Sᴇᴛ ᴛᴏ Uᴘʟᴏᴀᴅᴇᴅ !")
+            try:
+                await client.send_message(chat_id=int(from_user), text=f"<b>Hᴇʏ {user.mention}, Sᴇɴᴅ Iᴍᴅʙ Lɪɴᴋ Fᴏʀ Mᴏʀᴇ Dᴇᴛᴀɪʟs. Sᴇᴀʀᴄʜ Tɪᴛʟᴇ Oɴ Gᴏᴏɢʟᴇ 🔍.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+            except UserIsBlocked:
+                await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text=f"<b>Hᴇʏ {user.mention}, Sᴇɴᴅ Iᴍᴅʙ Lɪɴᴋ Fᴏʀ Mᴏʀᴇ Dᴇᴛᴀɪʟs. Sᴇᴀʀᴄʜ Tɪᴛʟᴇ Oɴ Gᴏᴏɢʟᴇ 🔍..</b>", reply_markup=InlineKeyboardMarkup(btn2))
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("Ialert"):
+        ident, from_user = query.data.split("#")
+        if int(query.from_user.id) == int(from_user):
+            user = await client.get_users(from_user)
+            await query.answer(f"Hᴇʏ {user.first_name}, Sᴇɴᴅ Iᴍᴅʙ Lɪɴᴋ Fᴏʀ Mᴏʀᴇ Dᴇᴛᴀɪʟs !", show_alert=True)
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("combined"):
+        ident, from_user = query.data.split("#")
+        btn = [[
+                InlineKeyboardButton("⚠️ Cᴏᴍʙɪɴᴇᴅ Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ 🙅", callback_data=f"Calert#{from_user}")
+              ]]
+        btn2 = [[
+                 InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
+               ]]
+        if query.from_user.id in ADMINS:
+            user = await client.get_users(from_user)
+            reply_markup = InlineKeyboardMarkup(btn)
+            content = query.message.text
+            await query.message.edit_text(f"<b><strike>{content}</strike></b>")
+            await query.message.edit_reply_markup(reply_markup)
+            await query.answer("Sᴇᴛ ᴛᴏ Uɴᴀᴠᴀɪʟᴀʙʟᴇ !")
+            try:
+                await client.send_message(chat_id=int(from_user), text=f"<b>Hᴇʏ {user.mention}, Sᴏʀʀʏ Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Is Uɴᴀᴠᴀɪʟᴀʙʟᴇ. Sᴏ Oᴜʀ Mᴏᴅᴇʀᴀᴛᴏʀs Cᴀɴ'ᴛ Uᴘʟᴏᴀᴅ Iᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+            except UserIsBlocked:
+                await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text=f"<b>Hᴇʏ {user.mention}, Sᴏʀʀʏ Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Is Uɴᴀᴠᴀɪʟᴀʙʟᴇ. Sᴏ Oᴜʀ Mᴏᴅᴇʀᴀᴛᴏʀs Cᴀɴ'ᴛ Uᴘʟᴏᴀᴅ Iᴛ.\n\nNᴏᴛᴇ: Tʜɪs ᴍᴇssᴀɢᴇ ɪs sᴇɴᴛ ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ ʙᴇᴄᴀᴜsᴇ ʏᴏᴜ'ᴠᴇ ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ. Tᴏ sᴇɴᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ PM, Mᴜsᴛ ᴜɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢʜᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("soon"):
+        ident, from_user = query.data.split("#")
+        btn = [[
+                InlineKeyboardButton("🧑‍💻 Uᴘʟᴏᴀᴅɪɴɢ Sᴏᴏɴ...", callback_data=f"UPalert#{from_user}")
+              ]]
+        btn2 = [[
+                 InlineKeyboardButton('Eɴᴊᴏʏ Oᴛʜᴇʀ Cᴏɴᴛᴇɴᴛ 🎬', url=f"https://t.me/c/2131885322/999999"),
+                 InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
+               ]]
+        if query.from_user.id in ADMINS:
+            user = await client.get_users(from_user)
+            reply_markup = InlineKeyboardMarkup(btn)
+            content = query.message.text
+            await query.message.edit_text(f"<b><strike>{content}</strike></b>")
+            await query.message.edit_reply_markup(reply_markup)
+            await query.answer("Sᴇᴛ ᴛᴏ Uᴘʟᴏᴀᴅᴇᴅ !")
+            try:
+                await client.send_message(chat_id=int(from_user), text=f"<b>Hᴇʏ {user.mention}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Wɪʟʟ 🧑‍💻 Uᴘʟᴏᴀᴅ Sᴏᴏɴ.... Tɪʟʟ Tʜᴇɴ Kɪɴᴅʟʏ Eɴᴊᴏʏ Oᴛʜᴇʀ Cᴏɴᴛᴇɴᴛ 🎬.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+            except UserIsBlocked:
+                await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text=f"<b>Hᴇʏ {user.mention}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Wɪʟʟ 🧑‍💻 Uᴘʟᴏᴀᴅ Sᴏᴏɴ.... Kɪɴᴅʟʏ Eɴᴊᴏʏ Oᴛʜᴇʀ Cᴏɴᴛᴇɴᴛ 🎬.\n\nNᴏᴛᴇ: Tʜɪs ᴍᴇssᴀɢᴇ ɪs sᴇɴᴛ ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ ʙᴇᴄᴀᴜsᴇ ʏᴏᴜ'ᴠᴇ ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ. Tᴏ sᴇɴᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ PM, Mᴜsᴛ ᴜɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("UPalert"):
+        ident, from_user = query.data.split("#")
+        if int(query.from_user.id) == int(from_user):
+            user = await client.get_users(from_user)
+            await query.answer(f"Hᴇʏ {user.first_name}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Wɪʟʟ 🧑‍💻 Uᴘʟᴏᴀᴅ Sᴏᴏɴ.... !", show_alert=True)
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("Calert"):
+        ident, from_user = query.data.split("#")
+        if int(query.from_user.id) == int(from_user):
+            user = await client.get_users(from_user)
+            await query.answer(f"Hᴇʏ {user.first_name}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ ɪs Uɴᴀᴠᴀɪʟᴀʙʟᴇ !", show_alert=True)
         else:
             await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
 
