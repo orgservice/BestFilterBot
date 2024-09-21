@@ -13,8 +13,8 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '11899755'))
-API_HASH = environ.get('API_HASH', '19cc7934f37e872f9ed120205c55adb6')
+API_ID = int(environ.get('API_ID', '20778875'))
+API_HASH = environ.get('API_HASH', 'c49ecc77f2abfaedb1bd6bca14559702')
 BOT_TOKEN = environ.get('BOT_TOKEN', '6892047030:AAEae80QZ2Q7vNyTvvWc-BePR7_Fe9y6PxE')
 
 # Bot settings
@@ -102,8 +102,8 @@ else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "http://157.173.222.98:8086/".format(FQDN) if ON_HEROKU or NO_PORT else \
-    "http://157.173.222.98:8086/".format(FQDN, PORT)
+URL = "http://157.173.222.98:8086".format(FQDN) if ON_HEROKU or NO_PORT else \
+    "http://157.173.222.98:8086".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
@@ -118,9 +118,9 @@ else:
     ON_HEROKU = False
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "http://157.173.222.98:8086/".format(FQDN)
+    URL = "http://157.173.222.98:8086".format(FQDN)
 else:
-    URL = "http://157.173.222.98:8086/".format(FQDN)
+    URL = "http://157.173.222.98:8086".format(FQDN)
     
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
