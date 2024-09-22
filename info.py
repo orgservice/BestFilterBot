@@ -116,7 +116,7 @@ if 'DYNO' in environ:
 
 else:
     ON_HEROKU = False
-HAS_SSL=bool(getenv('HAS_SSL',True))
+HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
     URL = "http://147.79.68.161:8086/".format(FQDN)
 else:
