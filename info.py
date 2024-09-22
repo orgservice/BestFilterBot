@@ -61,7 +61,7 @@ IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
-PORT = environ.get("PORT", "8080")
+PORT = environ.get("PORT", "3000")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/moviespremium')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/orgprime')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/orgpremium/7')
@@ -95,7 +95,7 @@ NO_PORT = bool(environ.get('NO_PORT', False))
 APP_NAME = None
 if 'DYNO' in environ:
     ON_HEROKU = True
-    APP_NAME = environ.get('APP_NAME', "imaxfiltersbot")
+    APP_NAME = environ.get('APP_NAME', "")
 else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
