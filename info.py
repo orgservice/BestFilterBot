@@ -96,11 +96,11 @@ SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "seas
 NO_PORT = bool(environ.get('NO_PORT', False))
 APP_NAME = None
 if 'DYNO' in environ:
-    ON_HEROKU = True
+    ON_HEROKU = False
     APP_NAME = environ.get('APP_NAME', "")
 else:
     ON_HEROKU = False
-BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
+BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '147.79.68.161'))
 FQDN = "http://147.79.68.161:8086/"
 URL = "http://147.79.68.161:8086/".format(FQDN) if ON_HEROKU or NO_PORT else \
     "http://147.79.68.161:8086/".format(FQDN, PORT)
@@ -110,9 +110,15 @@ SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
 MULTI_CLIENT = False
 name = str(environ.get('name', 'LazyPrincess'))
 PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
+if 'DYNO' in environ:
+    ON_HEROKU = True
+    APP_NAME = str(getenv('APP_NAME'))
 
+else:
+    ON_HEROKU = False
+HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "http://147.79.68.161:8086/".format(FQDN)
+    URL = "".format(FQDN)
 else:
     URL = "http://147.79.68.161:8086/".format(FQDN)
     
