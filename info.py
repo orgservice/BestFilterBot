@@ -54,7 +54,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Collection')
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002139713029'))
 
 # Others
-VERIFY = bool(environ.get('VERIFY', False))
+VERIFY = bool(environ.get('VERIFY', True))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'publicearn.com')
 SHORTLINK_API = environ.get('SHORTLINK_API', '97119e40c5fc3875820a6c37253b3c3bcee51a9d')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
