@@ -101,7 +101,8 @@ if 'DYNO' in environ:
 else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '147.79.68.161'))
-FQDN = str(getenv('FQDN', '147.79.68.161:8086')) if not ON_HEROKU or getenv('FQDN', '147.79.68.161:8086') else APP_NAME+'.herokuapp.com'
+FQDN = str(getenv('FQDN', '147.79.68.161:8086')) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
+URL = "http://{}/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
