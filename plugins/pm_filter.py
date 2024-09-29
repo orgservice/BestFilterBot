@@ -5,8 +5,6 @@ import math
 import random
 import pytz
 from datetime import datetime, timedelta, date, time
-lock = asyncio.Lock()
-
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from Script import script
 import pyrogram
@@ -33,6 +31,7 @@ import logging
 from urllib.parse import quote_plus
 from util.file_properties import get_name, get_hash, get_media_file_size
 
+lock = asyncio.Lock()
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
