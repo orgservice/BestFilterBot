@@ -1497,9 +1497,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         [
                             InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
                             InlineKeyboardButton('🖥️ Watch online 🖥️', url=lazy_stream) # web stream Link
-                        ],
-                        [
-                            InlineKeyboardButton("• Wᴀᴛᴄʜ ɪɴ Wᴇʙ Aᴘᴘ •", web_app=WebAppInfo(url=lazy_stream)) # webapp stream Link
                         ]
                     ]
                 )
