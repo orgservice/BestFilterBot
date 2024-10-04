@@ -1145,6 +1145,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("Cᴏᴍʙɪɴᴇᴅ Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ 🙅", callback_data=f"combined#{from_user}")
              ],[
                 InlineKeyboardButton("🧑‍💻 Uᴘʟᴏᴀᴅɪɴɢ Sᴏᴏɴ... ⚡", callback_data=f"soon#{from_user}")
+             ],[
+                InlineKeyboardButton("🚫 Nᴏᴛ Rᴇʟᴇᴀsᴇᴅ Oɴ Oᴛᴛ Yᴇᴛ 🎬", callback_data=f"notonott#{from_user}")
              ]]
         btn2 = [[
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
@@ -1320,6 +1322,36 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await client.send_message(chat_id=int(from_user), text=f"<b>Hᴇʏ {user.mention}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Hᴀs Bᴇᴇɴ Uᴘʟᴏᴀᴅᴇᴅ Bʏ Oᴜʀ Mᴏᴅᴇʀᴀᴛᴏʀs. Kɪɴᴅʟʏ Sᴇᴀʀᴄʜ Iɴ Oᴜʀ Wᴇʙ Sᴇʀɪᴇs Cʜᴀɴɴᴇʟ ✅.</b>", reply_markup=InlineKeyboardMarkup(btn2))
             except UserIsBlocked:
                 await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text=f"<b>Hᴇʏ {user.mention}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Hᴀs Bᴇᴇɴ Uᴘʟᴏᴀᴅᴇᴅ Bʏ Oᴜʀ Mᴏᴅᴇʀᴀᴛᴏʀs. Kɪɴᴅʟʏ Sᴇᴀʀᴄʜ Iɴ Oᴜʀ Wᴇʙ Sᴇʀɪᴇs Cʜᴀɴɴᴇʟ ✅.\n\nNᴏᴛᴇ: Tʜɪs ᴍᴇssᴀɢᴇ ɪs sᴇɴᴛ ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ ʙᴇᴄᴀᴜsᴇ ʏᴏᴜ'ᴠᴇ ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ. Tᴏ sᴇɴᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ PM, Mᴜsᴛ ᴜɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("notonott"):
+        ident, from_user = query.data.split("#")
+        btn = [[
+                InlineKeyboardButton("🚫 Nᴏᴛ Rᴇʟᴇᴀsᴇᴅ Oɴ Oᴛᴛ Yᴇᴛ 🎬", callback_data=f"ottalert#{from_user}")
+              ]]
+        btn2 = [[
+                 InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
+               ]]
+        if query.from_user.id in ADMINS:
+            user = await client.get_users(from_user)
+            reply_markup = InlineKeyboardMarkup(btn)
+            content = query.message.text
+            await query.message.edit_text(f"<b><strike>{content}</strike></b>")
+            await query.message.edit_reply_markup(reply_markup)
+            await query.answer("! Nᴏᴛ Rᴇʟᴇᴀsᴇᴅ 😐")
+            try:
+                await client.send_message(chat_id=int(from_user), text=f"<b>Hᴇʏ {user.mention}, Sᴏʀʀʏ Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Is 🚫 Nᴏᴛ Rᴇʟᴇᴀsᴇᴅ Oɴ Oᴛᴛ Yᴇᴛ 🎬 😐. Sᴏ Oᴜʀ Mᴏᴅᴇʀᴀᴛᴏʀs Cᴀɴ'ᴛ Uᴘʟᴏᴀᴅ Iᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+            except UserIsBlocked:
+                await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text=f"<b>Hᴇʏ {user.mention}, Sᴏʀʀʏ Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Is 🚫 Nᴏᴛ Rᴇʟᴇᴀsᴇᴅ Oɴ Oᴛᴛ Yᴇᴛ 🎬 😐. Sᴏ Oᴜʀ Mᴏᴅᴇʀᴀᴛᴏʀs Cᴀɴ'ᴛ Uᴘʟᴏᴀᴅ Iᴛ.\n\nNᴏᴛᴇ: Tʜɪs ᴍᴇssᴀɢᴇ ɪs sᴇɴᴛ ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ ʙᴇᴄᴀᴜsᴇ ʏᴏᴜ'ᴠᴇ ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ. Tᴏ sᴇɴᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ PM, Mᴜsᴛ ᴜɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+        else:
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢʜᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
+
+    elif query.data.startswith("ottalert"):
+        ident, from_user = query.data.split("#")
+        if int(query.from_user.id) == int(from_user):
+            user = await client.get_users(from_user)
+            await query.answer(f"Hᴇʏ {user.first_name}, Yᴏᴜʀ Rᴇᴏ̨ᴜᴇsᴛ Is 🚫 Nᴏᴛ Rᴇʟᴇᴀsᴇᴅ Oɴ Oᴛᴛ Yᴇᴛ 🎬 !", show_alert=True)
         else:
             await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
 
