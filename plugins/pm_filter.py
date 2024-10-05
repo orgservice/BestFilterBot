@@ -63,8 +63,9 @@ async def give_filter(client, message):
         search = message.text
         temp_files, temp_offset, total_results = await get_search_results(chat_id=message.chat.id, query=search.lower(), offset=0, filter=True)
         button = [[
-                       InlineKeyboardButton("✅ Bᴜʏ Sᴜʙsᴄʀɪᴘᴛɪᴏɴ & Eɴᴊᴏʏ 😍", url=f"https://t.me/ORGPrime/25"),
-                       InlineKeyboardButton("🍿 Pʀᴇᴍɪᴜᴍ Usᴇʀs Sᴇᴀʀᴄʜ Hᴇʀᴇ ⚡", url=f"https://t.me/c/2127187291/999999")
+            InlineKeyboardButton("✅ Bᴜʏ Sᴜʙsᴄʀɪᴘᴛɪᴏɴ & Eɴᴊᴏʏ 😍", url=f"https://t.me/ORGPrime/25")
+        ],[
+            InlineKeyboardButton('🍿 Pʀᴇᴍɪᴜᴍ Usᴇʀs Sᴇᴀʀᴄʜ Hᴇʀᴇ ⚡', callback_data='premiumusers')
         ]]
         if total_results == 0:
             return
@@ -73,6 +74,13 @@ async def give_filter(client, message):
             #return await message.reply_text(f"<b>Hᴇʏ 👋 {message.from_user.mention},</b>\n\n<blockquote><b>📂 Tᴏᴛᴀʟ  「 <code>{str(total_results)}</code> 」 Fɪʟᴇs Aᴠᴀɪʟᴀʙʟᴇ Iɴ Pʀᴇᴍɪᴜᴍ Cʜᴀɴɴᴇʟ.\n\nFᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ <u><code>'{search}'</code></u></b></blockquote>\n\n<blockquote><b>♻ Buy 'Subscription' & Enjoy 😍 🚫 Ads-Free... Movies/Series ✅</blockquote>\n\n🎁 𝙋𝙧𝙚𝙢𝙞𝙪𝙢 𝙁𝙚𝙖𝙩𝙪𝙧𝙚𝙨 :<blockquote>\n○ ᴡᴀᴛᴄʜ ᴀʟʟ 𝒎𝒐𝒗𝒊𝒆𝒔/𝒔𝒆𝒓𝒊𝒆𝒔 ᴀs ʏᴏᴜ ᴡᴀɴᴛ﹖ᴜɴʟɪᴍɪᴛᴇᴅ.\n○ ᴇɴᴊᴏʏ ᴅᴀɪʟʏ 𝒎𝒐𝒗𝒊𝒆𝒔/𝒔𝒆𝒓𝒊𝒆𝒔/𝒕𝒗𝒔𝒉𝒐𝒘𝒔.\n○ ᴇɴᴊᴏʏ ᴘᴏʀɴ 🔞 ﹠ ᴀᴅᴜʟᴛ ᴄᴏɴᴛᴇɴᴛ ᴅᴀɪʟʏ.\n○ ᴡᴀᴛᴄʜ ɪɴ 𝟺𝟾𝟶ᴘ »ᴛᴏ»﹙𝟺ᴋ﹚ʜᴅʀ ϙᴜᴀʟɪᴛʏ.\n○ ᴇɴᴊᴏʏ ᴅɪʀᴇᴄᴛ ᴍᴏᴠɪᴇs 🎥  ᴏɴ ᴄʜᴀɴɴᴇʟ.\n○ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ﹠ ɢᴇᴛ 𝟽 ᴄʜᴀɴɴᴇʟ.\n○ ʀᴇϙᴜᴇsᴛ ɢʀᴏᴜᴘ 💬 ᴀᴠᴀɪʟᴀʙʟᴇ 🔥\n○ ʀᴇǫᴜᴇsᴛ ᴡɪʟʟ ᴄᴏᴍᴘʟᴇᴛᴇ ᴡɪᴛʜ ɪɴ 1 ʜᴏᴜʀ.\n○ 𝗡𝗼 𝗔𝗗'𝗦 𝗟𝗶𝗻𝗸 𝗶𝗻 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🔥 \n○ ᴇɴᴊᴏʏ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ.\n○ ɢᴇɴᴇʀᴀᴛᴇ ʜɪɢʜ-sᴘᴇᴇᴅ 🚀 ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ\n○ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs.\n○ ꜰᴜʟʟ 𝟸𝟺𝔵𝟽 ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ 💬\n○ ɴᴏ ᴇxᴛʀᴀ ғᴇᴇs. ʙᴜᴛ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs 🎉\n○ 𝟷𝟶𝟶% ᴛʀᴜsᴛᴇᴅ ᴄʜᴀɴɴᴇʟ.\n✓ ᴍᴀɴʏ ᴍᴏʀᴇ....</blockquote>\n\n<i>👑 Buy Subscription & Enjoy 😍\n👉 https://t.me/ORGPrime/25\n\n<u>Starting ₹100 Only [For 1 Year]</u>😱</i>\n\n<blockquote>Don't Waste Your Time to Search 🔍 Movies On Telegram... or Bypassing Irritating [Ads] Link......</b></blockquote>\n\n<b><i><u>Enjoy Movies in Just 1 Click</u>😍😘</i></b>", reply_markup=InlineKeyboardMarkup(button))
 
 #(f"<b>Hᴇʏ {message.from_user.mention},\n\n<blockquote>Tᴏᴛᴀʟ <code>{str(total_results)} Rᴇsᴜʟᴛs</code> Aᴠᴀɪʟᴀʙʟᴇ.\nFᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ <code>{search}</code>.</blockquote>\n\nYᴏᴜ Wɪʟʟ Gᴇᴛ Fɪʟᴇs Fʀᴏᴍ Hᴇʀᴇ...\nSᴇᴀʀᴄʜ 🔍 Hᴇʀᴇ ➧ https://t.me/orgprimemovies</b>", disable_web_page_preview=True)
+    elif query.data == "premiumusers":
+        buttons = [[
+            InlineKeyboardButton("Mᴀsᴛᴇʀ Pʟᴀɴ", url=f"https://t.me/c/2010455331/999999"),
+            InlineKeyboardButton("Pʀᴇᴍɪᴜᴍ Pʟᴀɴ", url=f"https://t.me/c/2127187291/999999")
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(f"<b>Hᴇʏ 👋 {message.from_user.mention},</b>\n\n<blockquote><b>🎬 ' {search} '</b></blockquote>\n<blockquote><b>Tᴏᴛᴀʟ  「 <code>{str(total_results)}</code> 」 Fɪʟᴇs 🗂️</b></blockquote>\n\n<b>✅ Now Available 🔥</b>\n\n<b><i>👑 Buy Subscription & Enjoy 😍\n👉 https://t.me/ORGPrime/25\n\n<u>Starting ₹100 Only [For 1 Year</u>] 😱</i>\n\n<blockquote>Don't Waste Your Time to Search 🔍 Movies On Telegram... or Bypassing Irritating [Ads] Link...</b></blockquote>\n\n<b><i><u>Enjoy Movies in Just 1 Click</u> 😍😘</i></b>", reply_markup=InlineKeyboardMarkup(button))
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
