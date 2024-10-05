@@ -65,7 +65,7 @@ async def give_filter(client, message):
         button = [[
             InlineKeyboardButton("✅ Bᴜʏ Sᴜʙsᴄʀɪᴘᴛɪᴏɴ & Eɴᴊᴏʏ 😍", url=f"https://t.me/ORGPrime/25")
         ],[
-            InlineKeyboardButton('🍿 Pʀᴇᴍɪᴜᴍ Usᴇʀs Sᴇᴀʀᴄʜ Hᴇʀᴇ ⚡', callback_data='premiumusers')
+            InlineKeyboardButton("🍿 Pʀᴇᴍɪᴜᴍ Usᴇʀs Sᴇᴀʀᴄʜ Hᴇʀᴇ ⚡", url=f"https://t.me/c/2127187291/999999")
         ]]
         if total_results == 0:
             return
@@ -1682,13 +1682,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 disable_web_page_preview=True,                  
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💸 ᴄʜᴇᴄᴋᴏᴜᴛ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴꜱ 💸", callback_data='seeplans')]]))
             return    
-
-    elif message.data == "premiumusers":
-        buttons = [[
-            InlineKeyboardButton("Mᴀsᴛᴇʀ Pʟᴀɴ", url=f"https://t.me/c/2010455331/999999"),
-            InlineKeyboardButton("Pʀᴇᴍɪᴜᴍ Pʟᴀɴ", url=f"https://t.me/c/2127187291/999999")
-        ]]
-        await message.edit_text(f"<b>Hᴇʏ 👋 {message.from_user.mention},</b>\n\n<blockquote><b>🎬 ' {search} '</b></blockquote>\n<blockquote><b>Tᴏᴛᴀʟ  「 <code>{str(total_results)}</code> 」 Fɪʟᴇs 🗂️</b></blockquote>\n\n<b>✅ Now Available 🔥</b>\n\n<b><i>👑 Buy Subscription & Enjoy 😍\n👉 https://t.me/ORGPrime/25\n\n<u>Starting ₹100 Only [For 1 Year</u>] 😱</i>\n\n<blockquote>Don't Waste Your Time to Search 🔍 Movies On Telegram... or Bypassing Irritating [Ads] Link...</b></blockquote>\n\n<b><i><u>Enjoy Movies in Just 1 Click</u> 😍😘</i></b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     elif query.data == "premium_info":
         buttons = [[
