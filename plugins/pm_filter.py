@@ -47,6 +47,7 @@ SPELL_CHECK = {}
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     if message.chat.id != SUPPORT_CHAT_ID:
+        glob = await global_filters(client, message)
         manual = await manual_filters(client, message)
         if manual == False:
             settings = await get_settings(message.chat.id)
@@ -244,8 +245,8 @@ async def advantage_spoll_choker(bot, query):
     await query.answer(script.TOP_ALRT_MSG)
     gl = await global_filters(bot, query.message, text=movie)
     if gl == False:
-        k = await manual_filters(bot, query.message, text=movie)
-        if k == False:
+        manual = await manual_filters(bot, query.message, text=movie)
+        if manual == False:
             files, offset, total_results = await get_search_results(query.message.chat.id, movie, offset=0, filter=True)
             if files:
                 k = (movie, files, offset, total_results)
@@ -255,9 +256,9 @@ async def advantage_spoll_choker(bot, query):
                 reqstr = await bot.get_users(reqstr1)
                 if NO_RESULTS_MSG:
                     await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
-                k = await query.message.edit(script.MVE_NT_FND)
+                k_msg = await query.message.edit(script.MVE_NT_FND)
                 await asyncio.sleep(300)
-                await k.delete()
+                await k_msg.delete()
 
 #languages
 
