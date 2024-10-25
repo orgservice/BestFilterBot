@@ -29,9 +29,9 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/e06089d66b2b556816e
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/ce2103c2c9a160ff1d38f.jpg'))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6924461727 5378316778').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6924461727 5378316778 6394827136').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002055068009').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '5378316778').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '6924461727 5378316778 6394827136').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
 auth_channel = environ.get('AUTH_CHANNEL')
@@ -100,8 +100,8 @@ if 'DYNO' in environ:
     APP_NAME = environ.get('APP_NAME', "primefilterbot")
 else:
     ON_HEROKU = False
-BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '194.238.18.26'))
-FQDN = str(getenv('FQDN', '194.238.18.26:8086')) if not ON_HEROKU or getenv('FQDN', '194.238.18.26:8086') else APP_NAME+'.herokuapp.com'
+BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '145.223.19.132'))
+FQDN = str(getenv('FQDN', '145.223.19.132:8086')) if not ON_HEROKU or getenv('FQDN', '145.223.19.132:8086') else APP_NAME+'.herokuapp.com'
 URL = "http://{}/".format(FQDN) if ON_HEROKU or NO_PORT else \
     "http://{}/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
